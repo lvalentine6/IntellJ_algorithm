@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Arrays;
 
-public class cipherplus {
+public class Cipherplus {
     public static void main(String[] args) {
         int n = 123;
         int answer = 0;

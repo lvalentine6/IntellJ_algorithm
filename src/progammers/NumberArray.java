@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.*;
 
-public class numberArray {
+public class NumberArray {
     public static void main(String[] args) {
         long n = 12345;
 
