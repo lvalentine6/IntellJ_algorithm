@@ -1,7 +1,5 @@
 package progammers;
 
-import java.util.Arrays;
-
 public class WeirdStringMake {
     public static void main(String[] args) {
         String s = "try hello world";
@@ -22,8 +20,5 @@ public class WeirdStringMake {
         String answer = sb.toString().trim();
 
         System.out.println(answer);
-        System.out.println(s);
-
-        System.out.println(Arrays.toString(st));
     }
 }

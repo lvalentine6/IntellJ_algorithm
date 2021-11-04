@@ -9,7 +9,6 @@ public class DartGame2 {
         String dartResult = "1D#2S*3S";
         int answer = 0;
 
-        // 1. 문자열을 하나씩 돌면서 계산
         // 2. 정규표현식으로 그룹별로 나누고 계산
 
         // 패턴 컴파일
