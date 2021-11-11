@@ -9,14 +9,14 @@ public class Remainder1 {
 
         // x를 넣을 treeset 초기화
         TreeSet<Integer> ts = new TreeSet<>();
-        int num = 1;
+        int x = 1;
 
         for (int i=0; i<n; i++) {
-            if(n % num != 1) {
-                num++;
-            } else {
-                ts.add(num);
-                num++;
+            if (n % x != 1) {
+                x++;
+            }else {
+                ts.add(x);
+                x++;
             }
         }
 
