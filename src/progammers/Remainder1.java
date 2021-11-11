@@ -7,7 +7,7 @@ public class Remainder1 {
         int n = 10;
         int answer = 0;
 
-        // x를 위한 list
+        // x를 넣을 treeset 초기화
         TreeSet<Integer> ts = new TreeSet<>();
         int num = 1;
 
