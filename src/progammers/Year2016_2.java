@@ -1,9 +1,7 @@
 package progammers;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Calendar;
 
 public class Year2016_2 {
     public static void main(String[] args) throws ParseException {
