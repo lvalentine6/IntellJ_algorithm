@@ -9,10 +9,10 @@ public class DivisorPlus {
         int right = 17;
         int answer = 0;
 
-        // 수 구해서 리스트에 저장
         List<Integer> num = new ArrayList<>();
         int temp = 0;
 
+        // 수 구해서 리스트에 저장
         while (left != right + 1) {
             num.add(left++);
         }
