@@ -58,7 +58,7 @@ public class Keypad {
         System.out.println(answer);
     }
     public static int xy(int n, int p) {
-        // 키패드를 좌표로 전역변수 설정
+        // 키패드를 좌표로 변수 설정
         int[][] keypad = {{0,0},{0,1},{0,2},{1,0},{1,1},{1,2},{2,0},{2,1},{2,2},{3,0},{3,1},{3,2}};
         // x 좌표 거리 계산
         int xx = Math.abs(keypad[p - 1][0] - keypad[n - 1][0]);
