@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Arrays;
 
-public class Hopscotch {
+public class Hopscotch_L2 {
     public static void main(String[] args) {
         int[][] land = {{1,2,3,5},{5,6,7,8},{4,3,2,1}};
         int answer = 0;
