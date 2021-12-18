@@ -28,7 +28,7 @@ public class H_Index {
             h++;
         }
         answer = Collections.max(list);
-        System.out.println(list);
+
         System.out.println(answer);
     }
 }
