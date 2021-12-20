@@ -30,6 +30,7 @@ public class Tuple {
                 }
             }
         }
+        // 리스트 배열로 변환
         answer = list.stream().mapToInt(i -> i).toArray();
         System.out.println(Arrays.toString(answer));
     }
