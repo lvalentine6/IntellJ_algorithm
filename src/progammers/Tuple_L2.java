@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.*;
 
-public class Tuple {
+public class Tuple_L2 {
     public static void main(String[] args) {
         String s = "{{4,2,3},{3},{2,3,4,1},{2,3}}";
         int[] answer = {};
