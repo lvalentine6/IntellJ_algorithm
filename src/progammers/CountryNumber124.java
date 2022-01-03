@@ -19,6 +19,7 @@ public class CountryNumber124 {
             sb.append(remain);
         }
 
+        // 반대로 StringBuilder 넣기
         answer = sb.reverse().toString();
 
         System.out.println(answer);
