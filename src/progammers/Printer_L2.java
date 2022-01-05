@@ -19,16 +19,15 @@ public class Printer_L2 {
         // 큐가 비어있지 않다면
         while(!pq.isEmpty()){
             // 큐에서 나오는 값과 매칭되는 경우를 탐색.
-            for(int i = 0;i<priorities.length;i++){
+            for(int i = 0; i<priorities.length; i++){
                 // 값만 일치하는 경우 해당 문서 출력.
-                if(pq.peek() == priorities[i] ){
+                if(pq.peek() == priorities[i]){
                     pq.poll();
                     answer++;
                     // 값과 인덱스가 모두 일치하면 반환
-                    if(location == i ) break;
+                    if(location == i ); // return answer;
                 }
             }
-
         }
         System.out.println(answer);
     }
