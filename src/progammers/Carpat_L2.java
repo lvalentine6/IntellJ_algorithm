@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Arrays;
 
-public class Carpat {
+public class Carpat_L2 {
     public static void main(String[] args) {
         int brown = 10;
         int yellow = 2;
