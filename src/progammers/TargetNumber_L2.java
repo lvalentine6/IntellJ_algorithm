@@ -9,7 +9,7 @@ public class TargetNumber_L2 {
             return answer;
         }
 
-        // DFS
+        // DFS (재귀 이용)
         public void dfs(int[] numbers, int depth, int target, int sum){
             // 마지막 노드 까지 탐색한 경우
             if(depth == numbers.length){
