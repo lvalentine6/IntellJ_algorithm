@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Stack;
 
-public class PairRemove {
+public class PairRemove_L2 {
     public static void main(String[] args) {
         String s = "cdcd";
         int answer = 0;
