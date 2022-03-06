@@ -48,10 +48,10 @@ public class ParenthesisConvert_L2 {
     }
 
     // 올바른 문자열인지 확인하는 메서드
-    public static boolean IsCorrect (String p) {
+    public static boolean IsCorrect (String u) {
         Stack<String> st = new Stack<>();
         // 스텍에 (만 넣어주고 )를 만나면 스텍에서 제거
-        for (String i : p.split("")) {
+        for (String i : u.split("")) {
             if(i.equals("(")) {
                 st.push(i);
             } if(!st.isEmpty() && i.equals(")")) {
