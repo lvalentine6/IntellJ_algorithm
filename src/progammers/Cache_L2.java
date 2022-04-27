@@ -14,7 +14,7 @@ public class Cache_L2 {
 
         LinkedList<String> list = new LinkedList<>();
         for (int i = 0; i < cities.length; i++) {
-            // 캐시의 사이즈가 0인것 고려
+            // 캐시의 사이즈가 0일수도 있다는것을 고려
             if(list.size() > cacheSize) {
                 list.removeLast();
             }
