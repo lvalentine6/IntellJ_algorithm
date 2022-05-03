@@ -18,7 +18,6 @@ public class Tiredness {
         // 최댓값을 위한 cnt
         int cnt = 0;
         DFS(k, dungeons, cnt);
-
         return answer;
     }
 
