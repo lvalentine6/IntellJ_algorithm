@@ -1,4 +1,4 @@
-package progammers;
+package BOJ;
 import java.util.*;
 
 public class Main {
