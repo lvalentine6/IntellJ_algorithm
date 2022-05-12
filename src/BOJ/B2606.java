@@ -22,7 +22,7 @@ public class B2606 {
         arr = new int[n + 1][n + 1];
         // 방문한 노드인지 확인
         visit = new boolean[n + 1];
-
+        // 탐색 경로 배열
         for (int i = 0; i < r; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
