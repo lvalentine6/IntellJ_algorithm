@@ -32,6 +32,7 @@ public class B15650 {
             sb.append('\n');
             return;
         }
+        // idx를 증가시키면서 idx부터 재귀 호출
         for (int i = idx; i <= n; i++) {
             arr[depth] = i;
             dfs(i + 1, depth + 1);
