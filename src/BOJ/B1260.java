@@ -35,12 +35,12 @@ public class B1260 {
         }
         // dfs 실행
         dfs(v);
+        // 공백추가
         sb.append("\n");
         // visit 배열 초기화
         visit = new boolean[n + 1];
-
+        //bfs 실행
         bfs(v);
-
         System.out.println(sb);
     }
 
