@@ -27,19 +27,20 @@ public class B2667 {
                 arr[i][j] = Integer.parseInt(temp[j]);
             }
         }
+        // cnt를 저장하기 위한 리스트
         ArrayList<Integer> list = new ArrayList<>();
         // 인접행렬에서 dfs 실행
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if(arr[i][j] == 1) {
+                    cnt = 1;
                     dfs(i, j);
                     answer++;
                     list.add(cnt);
-                    // cnt 0으로 초기화
-                    cnt = 0;
                 }
             }
         }
+        // cnt 정렬
         Collections.sort(list);
         System.out.println(answer);
         for(int i : list) {
@@ -59,7 +60,9 @@ public class B2667 {
             if(arr[nx][ny] == 0) {
                 continue;
             }
-            // 탐색한 집은 0으로 바꾸고 재귀호출
+            // 탐색한 집은 0으로 바꾸기
+            arr[x][y] = 0;
+            // 다음음집을 0으로 바꾸고 재귀 호출
             arr[nx][ny] = 0;
             dfs(nx, ny);
             cnt++;
