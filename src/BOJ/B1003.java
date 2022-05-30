@@ -11,4 +11,7 @@ public class B1003 {
         t = Integer.parseInt(br.readLine());
 
     }
+    public static void fibonacci(int num) {
+
+    }
 }
