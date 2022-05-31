@@ -13,7 +13,7 @@ public class B5430 {
         int t = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
 
-        //입력값 배열 저장
+        //입력값 배열 저장 ("error" 출력시 continue 하기위해 for문에 roof 별칭 부여)
         roof : for (int i = 0; i < t; i++) {
             Deque<Integer> deque = new LinkedList<>();
             String[] s = br.readLine().split("");
