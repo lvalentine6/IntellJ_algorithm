@@ -22,7 +22,7 @@ public class B1541 {
                 temp += Integer.parseInt(st2.nextToken());
             }
             cnt++;
-            if(cnt == 1) {
+            if (cnt == 1) {
                 sum += temp;
             } else {
                 sum -= temp;

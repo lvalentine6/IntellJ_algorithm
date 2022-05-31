@@ -1,7 +1,5 @@
 package progammers;
 
-import java.util.Arrays;
-
 public class StringCompression_L2 {
     public static void main(String[] args) {
         String s = "abcabcdede";
