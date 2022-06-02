@@ -2,8 +2,6 @@ package BOJ;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -22,6 +20,7 @@ public class B2178 {
         m = Integer.parseInt(st.nextToken());
         arr = new int[n + 1][m + 1];
         visit = new boolean[n + 1][m + 1];
+
         for (int i = 1; i < n + 1; i++) {
             String[] s = br.readLine().split("");
             for (int j = 1; j < m + 1; j++) {
@@ -42,16 +41,17 @@ public class B2178 {
             for (int i = 0; i < 4; i++) {
                 int nx = now[0] + dx[i];
                 int ny = now[1] + dy[i];
-
+                // 탐색 범위를 벗어나면
                 if (nx < 0 || ny < 0 || nx > n || ny > m) {
                     continue;
                 }
+                // 이미 탐색한 노드거나 0인 노드라면
                 if(visit[nx][ny] || arr[nx][ny] == 0) {
                     continue;
                 }
-
                 queue.add(new int[]{nx, ny});
                 visit[nx][ny] = true;
+                // 현재 노드 값에 1을 더한다
                 arr[nx][ny] = arr[now[0]][now[1]] + 1;
             }
         }
