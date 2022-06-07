@@ -43,7 +43,7 @@ public class B7569 {
             int nowZ = temp[0];
             int nowY = temp[1];
             int nowX = temp[2];
-            // 상하좌우위아래 탐색
+            // 상하좌우앞뒤 탐색
             for (int i = 0; i < 6; i++) {
                 int nextZ = nowZ + dz[i];
                 int nextY = nowY + dy[i];
