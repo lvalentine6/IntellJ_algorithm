@@ -30,20 +30,6 @@ public class B1620 {
                 sb.append(hm2.get(temp)).append("\n");
             }
         }
-
-//        for (int i = 0; i < m; i++) {
-//            String s = br.readLine();
-//            if (s.chars().allMatch(Character :: isDigit)) {
-//                sb.append(map.get(Integer.parseInt(s))).append("\n");
-//            } else {
-//                for(int key : map.keySet()) {
-//                    String value = map.get(key);
-//                    if(value.equals(s)) {
-//                        sb.append(key).append("\n");
-//                    }
-//                }
-//            }
-//        }
         System.out.println(sb);
     }
 }
