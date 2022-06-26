@@ -36,6 +36,5 @@ public class line_L2 {
                 visited[i] = false;
             }
         }
-
     }
 }
