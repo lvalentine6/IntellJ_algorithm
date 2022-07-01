@@ -7,14 +7,12 @@ import java.util.StringTokenizer;
 public class B1149 {
     static int n;
     static int[][] arr;
-    static boolean[][] visited;
     static int answer;
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
         arr = new int[n][3];
-        visited = new boolean[n][3];
         answer = Integer.MAX_VALUE;
 
         for (int i = 0; i < n; i++) {
