@@ -3,7 +3,6 @@ package BOJ;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 // 1. 각 치킨집의 개수를 구하고 m개를 선택해 조합구하기
@@ -48,8 +47,8 @@ public class B15686 {
 
     // 조합을 구하는 메서드
     static void combination(int idx, int depth) {
+        // 조합이 하나 만들어지면 도시 치킨거리 구하기
         if (depth == m) {
-            System.out.println(Arrays.toString(com));
             min = Math.min(minLength(), min);
             return;
         }
