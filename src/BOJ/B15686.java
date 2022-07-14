@@ -5,9 +5,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-// 1. 각 치킨집의 개수를 구하고 m개를 선택해 조합구하기
-// 2. 구한 조합으로 각 집마다 모든 치킨집에 대한 치킨거리 구하여 최솟값을 선택
-// 3. 최솟값을 모두 더하면 도시의 치킨거리가 최소
+// 1. 치킨집중에서 m개를 선택해 조합구하기
+// 2. 구한 조합으로 각 집마다 치킨거리 구하여 최솟값을 선택
+// 3. 각 집에 최솟값을 더하여 도시의 치킨거리 구하기
+// 3. 모든 조합을 돌면서 도시의 치킨거리의 최솟값을 반환
 
 public class B15686 {
     static int n, m, min;
@@ -25,6 +26,7 @@ public class B15686 {
         int[][] arr = new int[n][n];
         chickenList = new ArrayList<>();
         homeList = new ArrayList<>();
+
         // 조합을 저장할 배열
         com = new int[m];
         min = Integer.MAX_VALUE;
