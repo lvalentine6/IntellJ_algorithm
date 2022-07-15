@@ -15,7 +15,6 @@ public class RankSearch_L2 {
             volunteer[i] = new Volunteer(st.nextToken(), st.nextToken(), st.nextToken(), st.nextToken(), Integer.parseInt(st.nextToken()));
         }
 
-
         Query[] queries = new Query[query.length];
         for (int i = 0; i < query.length; i++) {
             query[i] = query[i].replaceAll("( and )", " ");
