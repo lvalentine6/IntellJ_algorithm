@@ -43,9 +43,11 @@ public class RankSearch_L2_2 {
     static void combination(String[] s, String str, int cnt) {
         // 조합이 완성되면
         if (cnt == 4) {
+            // 완성된 str이 없다면
             if (!hm.containsKey(str)) {
                 hm.put(str, new ArrayList<>());
             }
+            // 있다면 list를 가져와서 점수 추가
             hm.get(str).add(Integer.parseInt(s[4]));
             return;
         }
@@ -57,16 +59,21 @@ public class RankSearch_L2_2 {
     static int binarySearch(String key, int score) {
         ArrayList<Integer> list = hm.get(key);
         int left = 0;
+        // list 인덱스는 0부터 시작하므로 -1
         int right = list.size() - 1;
 
         while (left <= right) {
             int mid = (left + right) / 2;
+            // 중간값이 기준값보다 작으면
             if (list.get(mid) < score) {
+                // 왼쪽을 버린다.
                 left = mid + 1;
+                // 그게 아니면 오른쪽을 버린다.
             } else {
                 right = mid - 1;
             }
         }
+        // left가 조건에 맞는 처음 인덱스이므로 list.size()에서 처음 인덱스 값을 빼기
         return list.size() - left;
     }
 }
