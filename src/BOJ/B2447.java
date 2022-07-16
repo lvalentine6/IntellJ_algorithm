@@ -41,6 +41,7 @@ public class B2447 {
         // x,y 값을 바꿔주며 재귀 호출
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+                // 빈칸으로 있어야 하는 곳이라면
                 if (!(i == 1 && j == 1)) {
                     rec(x + i * (num / 3), y + j * (num / 3), num / 3);
                 }
