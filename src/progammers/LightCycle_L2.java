@@ -2,6 +2,7 @@ package progammers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class LightCycle_L2 {
@@ -13,7 +14,6 @@ public class LightCycle_L2 {
 
     public static void main(String[] args) {
         String[] grid = {"SL", "LR"};
-        int[] answer = {};
 
         // 배열의 가로, 세로 크기
         x = grid.length;
@@ -35,7 +35,11 @@ public class LightCycle_L2 {
             }
         }
 
-        System.out.println(list);
+        // list 정렬
+        Collections.sort(list);
+        int[] answer = list.stream().mapToInt(i -> i).toArray();
+
+        System.out.println(Arrays.toString(answer));
     }
 
     static int cycle(String[] grid, int i, int j, int k) {
@@ -43,15 +47,15 @@ public class LightCycle_L2 {
         int cnt = 0;
 
         // 처음 위치로 되올아오면 탐색 종료
-        while (!visited[x][y][k]) {
+        while (!visited[i][j][k]) {
             // 임의의 위치에서 빛 쏘고 방문 체크
-            visited[x][y][k] = true;
+            visited[i][j][k] = true;
             cnt++;
 
             // 왼쪽 0, 아래 1, 왼쪽 2, 위 3
-            if (grid[x].charAt(y) == 'L') {
+            if (grid[i].charAt(j) == 'L') {
                 k = k == 0 ? 3 : k - 1;
-            } else if (grid[x].charAt(y) == 'R') {
+            } else if (grid[i].charAt(j) == 'R') {
                 k = k == 3 ? 0 : k + 1;
             }
 
