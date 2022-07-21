@@ -11,7 +11,7 @@ public class B14502 {
     static int n, m;
     static int[][] arr;
     static int[] dx = {0, 0, 1, -1};
-    static int[] dy = {1, 1, 0, 0,};
+    static int[] dy = {1, -1, 0, 0};
     static boolean[][] virusVisited;
     static List<int[]> list;
     static List<Integer> cntList;
@@ -38,26 +38,32 @@ public class B14502 {
             }
         }
 
+        // 벽 쌓는 메서드
         wall(arr, visited, 0);
 
-//        System.out.println(cntList);
+        // 리스트에서 가장 큰 수 뽑기
         int max = Collections.max(cntList);
         System.out.println(max);
 
     }
 
+    // 재귀를 통한 완전탐색
     static void wall(int[][] array, boolean[][] visit, int depth) {
+        // 벽 3개를 세웠다면
         if (depth == 3) {
+            // array를 복사해서 다음 메서드로 넘겨줌
             int[][] arrayTemp = new int[n][m];
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < m; j++) {
                     arrayTemp[i][j] = array[i][j];
                 }
             }
-            virus(array);
-            array = arrayTemp;
+
+            // 바이러스 메서드 호출
+            virus(arrayTemp);
             return;
         }
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (array[i][j] == 0 && !visit[i][j]) {
@@ -71,8 +77,11 @@ public class B14502 {
         }
     }
 
+    // BFS를 통해 바이러스 퍼트리기
     static void virus(int[][] array) {
+        // 바이러스가 포함된 리스트 불러오기
         for (int[] temp : list) {
+            // BFS
             Queue<int[]> queue = new LinkedList();
             queue.add(temp);
 
@@ -95,11 +104,13 @@ public class B14502 {
                 }
             }
         }
-//        System.out.println(Arrays.deepToString(virusVisited));
+        // cal 메서드 호출
         cal(array);
+        // 사용한 배열 초기화
         virusVisited = new boolean[n][m];
     }
 
+    // 남아있는 0이 몇개인지 세는 메서드
     static void cal(int[][] array) {
         int cnt = 0;
         for (int i = 0; i < n; i++) {
@@ -109,6 +120,7 @@ public class B14502 {
                 }
             }
         }
+        // list에 저장
         cntList.add(cnt);
     }
 }
