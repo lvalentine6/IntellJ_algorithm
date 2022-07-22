@@ -4,9 +4,10 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
-// 벽을 세우는 알고리즘 -> 모르겠는데 이거 재귀로 완탐?
+// 벽을 세우는 알고리즘 -> 모르겠는데 재귀로 완탐하자
 // 바이러스를 퍼트리는 알고리즘 (BFS)
 // 0을 세는 알고리즘 (탐색)
+
 public class B14502 {
     static int n, m;
     static int[][] arr;
@@ -38,7 +39,7 @@ public class B14502 {
             }
         }
 
-        // 벽 쌓는 메서드
+        // 첫 메서드 호출
         wall(arr, visited, 0);
 
         // 리스트에서 가장 큰 수 뽑기
@@ -47,11 +48,11 @@ public class B14502 {
 
     }
 
-    // 재귀를 통한 완전탐색
+    // 완전탐색으로 벽 쌓는 메서드
     static void wall(int[][] array, boolean[][] visit, int depth) {
         // 벽 3개를 세웠다면
         if (depth == 3) {
-            // array를 복사해서 다음 메서드로 넘겨줌
+            // array를 복사해서 다음 메서드로 넘겨줌 (clone으로는 깊은 복사 안됨)
             int[][] arrayTemp = new int[n][m];
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < m; j++) {
@@ -77,9 +78,9 @@ public class B14502 {
         }
     }
 
-    // BFS를 통해 바이러스 퍼트리기
+    // BFS를 통해 바이러스 퍼트리는 메서드
     static void virus(int[][] array) {
-        // 바이러스가 포함된 리스트 불러오기
+        // 바이러스가 포함된 좌표 불러오기
         for (int[] temp : list) {
             // BFS
             Queue<int[]> queue = new LinkedList();
