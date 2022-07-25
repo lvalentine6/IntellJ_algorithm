@@ -1,13 +1,11 @@
 package progammers;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
-// 1. 각 컬럼별로 중복이 있는지 검사
-// 2. 중복이 없다면 cnt 증가후 그 컬럼은 탐색에서 제외
-// 3. 중복이 있다면 다른 컬럼과 조합해야 하므로 모든 조합 검사
+// 1. 모든 조합 만들기
+// 2. 만들어진 조합으로 유일성, 최소성 검사
 
 public class CandidateKey_L2 {
     static int answer;
@@ -18,6 +16,7 @@ public class CandidateKey_L2 {
         relationCopy = new String[][] {{"100", "ryan", "music", "2"}, {"200", "apeach", "math", "2"}, {"300", "tube", "computer", "3"}, {"400", "con", "computer", "4"}, {"500", "muzi", "music", "3"}, {"600", "apeach", "music", "2"}};
         answer = 0;
 
+        // 중복 조합을 고려하여 HashSet 사용
         candidateKey = new ArrayList<>();
         n = relationCopy.length;
         m = relationCopy[0].length;
@@ -30,6 +29,8 @@ public class CandidateKey_L2 {
         System.out.println(answer);
 
     }
+
+    // 조합 생성 메서드
     static void combination(int idx, int size, int depth, HashSet<Integer> set) {
         // 조합이 만들어지면
         if(depth >= size) {
@@ -43,7 +44,6 @@ public class CandidateKey_L2 {
                     return;
                 }
             }
-
             // 조합을 추가하고 answer 증가
             candidateKey.add(set);
             answer++;
@@ -58,7 +58,7 @@ public class CandidateKey_L2 {
         }
     }
 
-    // 유일성 검사
+    // 유일성 검사 메서드
     static boolean unique(HashSet<Integer> set) {
         List<String> list = new ArrayList<>();
         // 만들어진 조합으로 중복되는지 검사
