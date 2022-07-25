@@ -33,7 +33,7 @@ public class CandidateKey_L2 {
     // 조합 생성 메서드
     static void combination(int idx, int size, int depth, HashSet<Integer> set) {
         // 조합이 만들어지면
-        if(depth >= size) {
+        if(depth == size) {
             // 유일성 검사
             if(!unique(set)) {
                 return;
