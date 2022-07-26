@@ -1,6 +1,5 @@
 package progammers;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -19,18 +18,19 @@ public class WiresDivide_L2 {
             arr[wires[i][1]][wires[i][0]] = 1;
         }
 
-        System.out.println(Arrays.deepToString(arr));
-
         // 선 하나씩 끊으면서 bfs 탐색
         for (int i = 0; i < wires.length; i++) {
             int left = wires[i][0];
             int right = wires[i][1];
 
+            // 선 끊기
             arr[left][right] = 0;
             arr[right][left] = 0;
 
+            // bfs
             answer = Math.min(answer, bfs(left, n));
 
+            // 끊었던 선 복구
             arr[left][right] = 1;
             arr[right][left] = 1;
         }
@@ -39,6 +39,7 @@ public class WiresDivide_L2 {
 
     }
 
+    // bfs 메서드
     static int bfs(int left, int n) {
         int cnt = 1;
         boolean[] visited = new boolean[n + 1];
@@ -55,6 +56,7 @@ public class WiresDivide_L2 {
                 }
             }
         }
+        // cnt와 n - cnt는 각각 연결된 전력망
         return Math.abs(cnt - (n - cnt));
     }
 }
