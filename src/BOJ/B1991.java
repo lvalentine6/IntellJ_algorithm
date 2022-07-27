@@ -19,10 +19,14 @@ public class B1991 {
         // 입력값으로 이진 트리 만들기
         for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
+
+            // 부모, 자식 왼쪽, 자식 오른쪽 노드 만들기
+            // tree 배열에 0번째부터 위치시키기 위해 'A' 뺌
             int parentNode = st.nextToken().charAt(0) - 'A';
             int leftNode = st.nextToken().charAt(0) - 'A';
             int rightNode = st.nextToken().charAt(0) - 'A';
 
+            // . 에서 'A' 빼면 -19
             tree[parentNode][0] = (leftNode == -19) ? -1 : leftNode;
             tree[parentNode][1] = (rightNode == -19) ? -1 : rightNode;
         }
