@@ -13,7 +13,10 @@ public class B1991 {
         int n = Integer.parseInt(br.readLine());
         sb = new StringBuilder();
 
+        // 이진 트리
         tree = new int[n][2];
+
+        // 입력값으로 이진 트리 만들기
         for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int parentNode = st.nextToken().charAt(0) - 'A';
@@ -34,6 +37,7 @@ public class B1991 {
         System.out.println(sb);
     }
 
+    // 전위 순회 메서드
     static void preOrder(int s) {
         if (s == -1) return;
         // 현재 노드 값 추가
@@ -44,6 +48,7 @@ public class B1991 {
         preOrder(tree[s][1]);
     }
 
+    // 중위 순회 메서드
     static void inOrder(int s) {
         if (s == -1) return;
         // 왼쪽 자식 노드 호출
@@ -54,6 +59,7 @@ public class B1991 {
         inOrder(tree[s][1]);
     }
 
+    // 후위 순회 메서드
     static void postOrder(int s) {
         if (s == -1) return;
         // 왼쪽 자식 노드 호출
