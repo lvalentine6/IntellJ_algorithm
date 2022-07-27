@@ -10,8 +10,8 @@ public class B14500 {
     static boolean[][] visited;
     static int[] dx = {1, -1, 0, 0,};
     static int[] dy = {0, 0, -1, 1};
-    static int ax[][] = {{0, 0, 0, 1}, {1, 1, 1, 0}, {0, 1, 2, 1}, {0, 1, 2, 1}};
-    static int ay[][] = {{0, 1, 2, 1}, {0, 1, 2, 1}, {1, 1, 1, 0}, {0, 0, 0, 1}};
+    static int[][] ax = {{0, 0, 0, 1}, {1, 1, 1, 0}, {0, 1, 2, 1}, {0, 1, 2, 1}};
+    static int[][] ay = {{0, 1, 2, 1}, {0, 1, 2, 1}, {1, 1, 1, 0}, {0, 0, 0, 1}};
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -64,8 +64,8 @@ public class B14500 {
     }
 
     static void another(int x, int y) {
+        boolean check = false;
         for (int i = 0; i < 4; i++) {
-            boolean check = false;
             int sum = 0;
             for (int j = 0; j < 4; j++) {
                 int nx = x + ax[i][j];
