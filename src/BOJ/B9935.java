@@ -14,11 +14,12 @@ public class B9935 {
         Stack<Character> stack = new Stack<>();
         StringBuilder sb = new StringBuilder();
 
-        // 스택의 길이가 폭탄보과 같거나 크면 탐색
+        // 스택에 문자 하나씩 삽입
        for (int i = 0; i < s.length(); i++) {
-            stack.push(s.charAt(i));
+           stack.push(s.charAt(i));
 
-            if(stack.size() >= bomb.length()) {
+           // 스택의 길이가 폭탄보과 같거나 크면 탐색
+           if(stack.size() >= bomb.length()) {
                 boolean flag = true;
                 for (int j = 0; j < bomb.length(); j++) {
                     if(stack.get(stack.size() - bomb.length() + j) != bomb.charAt(j)) {
