@@ -13,11 +13,13 @@ public class B11725 {
         int[] parent = new int[n + 1];
         boolean[] visited = new boolean[n + 1];
 
+        // 인접 리스트 만들기
         List<ArrayList<Integer>> list = new ArrayList<>();
         for (int i = 0; i < n + 1; i++) {
             list.add(new ArrayList());
         }
 
+        // 입력값으로 인접 리스트 삽입
         for (int i = 1; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -43,6 +45,7 @@ public class B11725 {
             }
         }
 
+        // 출력
         for (int i = 0; i < parent.length; i++) {
             if ((parent[i] != 0)) {
                 if (i == parent.length - 1) {
