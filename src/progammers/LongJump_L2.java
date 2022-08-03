@@ -5,6 +5,10 @@ public class LongJump_L2 {
         int n = 1;
         long answer = 0;
 
+        if(n == 1) {
+            System.out.println(1);
+        }
+
         long[] dp = new long[n + 1];
         dp[1] = 1;
         dp[2] = 2;
