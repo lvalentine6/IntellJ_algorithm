@@ -1,18 +1,19 @@
 package progammers;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import org.w3c.dom.Node;
+
+import java.util.*;
 
 public class Delivery_L2_BFS {
     static List<ArrayList<Node>> list;
+    static int cnt;
     public static void main(String[] args) {
         int n = 6;
         int k = 4;
 //        int[][] road = {{1, 2, 1}, {2, 3, 3}, {5, 2, 2}, {1, 4, 2}, {5, 3, 1}, {5, 4, 2}};
         int[][] road = {{1,2,1},{1,3,2},{2,3,2},{3,4,3},{3,5,2},{3,5,3},{5,6,1}};
         int answer = 0;
+        cnt = 1;
 
         list = new ArrayList<>();
         int[] visited = new int[n + 1];
@@ -29,23 +30,37 @@ public class Delivery_L2_BFS {
 
         System.out.println(list);
 
-        bfs(n, visited);
+        bfs(n, k, visited);
+
+        answer = cnt;
+
+        System.out.println(cnt);
 
     }
-    static void bfs(int n, int[] visited) {
+    static void bfs(int n, int k, int[] visited) {
         // 탐색을 위한 queue
         Queue<Node> queue = new LinkedList<>();
 
         // 방문 배열 최댓값으로 초기화
-        for (int i = 0; i < n + 1; i++) {
+        for (int i = 2; i < visited.length; i++) {
             visited[i] = Integer.MAX_VALUE;
         }
-        System.out.println(list.get(1));
-//        queue.addAll(list.get(1));
-
+        queue.addAll(list.get(1));
 
         while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            if(visited[node.a] <= visited[node.b] + node.l) {
+                continue;
+            }
+            visited[node.a] = visited[node.b] + node.l;
+            queue.addAll(list.get(node.a));
+            System.out.println(Arrays.toString(visited));
+        }
 
+        for (int i = 2; i < n + 1; i++) {
+            if(visited[i] <= k) {
+                cnt++;
+            }
         }
     }
 
