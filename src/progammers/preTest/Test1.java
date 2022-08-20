@@ -3,81 +3,61 @@ package progammers.preTest;
 import java.util.*;
 
 public class Test1 {
-    static boolean[] visitedCom;
-    static long max;
     public static void main(String[] args) {
         String X = "5525";
         String Y = "1255";
         String answer = "";
 
         List<Character> list = new ArrayList<>();
-        boolean[] visited = new boolean[Y.length()];
+        List<Character> list2 = new ArrayList<>();
+        List<Character> listResult = new ArrayList<>();
+        Set<Character> set = new HashSet<>();
 
         for (int i = 0; i < X.length(); i++) {
-            for (int j = 0; j < Y.length(); j++) {
-                if(!visited[j] && (X.charAt(i) == Y.charAt(j))) {
-                    visited[j] = true;
-                    list.add(Y.charAt(j));
-                }
-            }
-        }
-        List<Character> listX = new ArrayList<>();
-        List<Character> listY = new ArrayList<>();
-
-        for (int i = 0; i < X.length(); i++) {
-            listX.add(X.charAt(i));
+            list.add(X.charAt(i));
+            set.add(X.charAt(i));
         }
 
         for (int i = 0; i < Y.length(); i++) {
-            listY.add(Y.charAt(i));
+            list2.add(Y.charAt(i));
         }
 
-        listX.retainAll(listY);
-        System.out.println(listX);
+        set.retainAll(list2);
+        System.out.println(list);
 
-        if(list.isEmpty()) {
+        for(char c : set) {
+            int cntX = 0;
+            int cntY = 0;
+            for (int i = 0; i < list.size(); i++) {
+                if(c == list.get(i)) cntX++;
+            }
+            for (int i = 0; i < list2.size(); i++) {
+                if(c == list2.get(i)) cntY++;
+            }
+            int min = Math.min(cntX, cntY);
+
+            for (int i = 0; i < min; i++) {
+                listResult.add(c);
+            }
+        }
+        System.out.println(listResult);
+
+        if(listResult.isEmpty()) {
             answer = "-1";
+//            return answer;
         }
 
-        Collections.sort(list, Collections.reverseOrder());
+        Collections.sort(listResult, Collections.reverseOrder());
 
-        if(list.get(0) == '0') {
+        if(listResult.get(0) == '0') {
             answer = "0";
+//            return answer;
         }
-//        boolean flag = false;
-//        for (char c : list) {
-//            if(c != '0') {
-//                flag = true;
-//            }
-//        }
-//
-//        if(!flag) {
-//            answer = "0";
-//        }
-//        visitedCom = new boolean[list.size()];
-//        max = 0;
-//        String str = "";
-//        com(list, str, 0);
-
-//        answer = String.valueOf(max);
         StringBuilder sb = new StringBuilder();
-        for(char c : list) {
+        for(char c : listResult) {
             sb.append(c);
         }
         answer = sb.toString();
         System.out.println(answer);
     }
-//    static void com(List<Character> list, String str, int cnt) {
-//        if(cnt == list.size()) {
-//            max = Math.max(Long.parseLong(str),max);
-//            return;
-//        }
-//        for (int i = 0; i < list.size(); i++) {
-//            if(!visitedCom[i]) {
-//                visitedCom[i] = true;
-//                com(list, str + list.get(i), cnt + 1);
-//                visitedCom[i] = false;
-//            }
-//        }
-//    }
 }
