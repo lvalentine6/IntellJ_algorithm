@@ -1,7 +1,7 @@
 package progammers.preTest1;
 
 import java.util.*;
-
+// 풀이시간 : 3시간
 public class Test1 {
     public static void main(String[] args) {
         String X = "5525";
@@ -23,7 +23,6 @@ public class Test1 {
         }
 
         set.retainAll(list2);
-        System.out.println(list);
 
         for(char c : set) {
             int cntX = 0;
@@ -40,7 +39,6 @@ public class Test1 {
                 listResult.add(c);
             }
         }
-        System.out.println(listResult);
 
         if(listResult.isEmpty()) {
             answer = "-1";
