@@ -1,4 +1,4 @@
-package progammers.preTest;
+package progammers.preTest1;
 
 import java.util.*;
 
