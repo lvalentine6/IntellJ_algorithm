@@ -16,24 +16,26 @@ public class Test3 {
         }
 
         int idx = 0;
-
         Stack<Integer> stack = new Stack<>();
 
-        while (idx != order.length) {
+        while (true) {
             int orderTemp = order[idx];
+            if (!queue.isEmpty()) {
+                if (queue.peek() == orderTemp) {
+                    queue.poll();
+                    answer++;
+                    idx++;
+                } else {
+                    stack.push(queue.poll());
+                }
+            }
             if (((!stack.isEmpty()) && stack.peek() == orderTemp)) {
                 stack.pop();
                 answer++;
                 idx++;
-            } else if((!queue.isEmpty()) && queue.peek() == orderTemp) {
-                queue.poll();
-                answer++;
-                idx++;
-            } else {
-                stack.push(queue.poll());
             }
         }
 
-        System.out.println(answer);
+//        System.out.println(answer);
     }
 }
