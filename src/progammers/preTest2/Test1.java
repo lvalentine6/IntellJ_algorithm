@@ -41,11 +41,11 @@ public class Test1 {
             list.add(temp);
             return;
         }
-        for (int i = 0; i < num.length; i++) {
+        for (int i = k; i < num.length; i++) {
             if (!visited[i]) {
                 visited[i] = true;
                 sum.add(num[i]);
-                combination(num, idx + 1, sum, visited, k + 1);
+                combination(num, idx + 1, sum, visited, i + 1);
                 sum.remove(sum.size() - 1);
                 visited[i] = false;
             }
