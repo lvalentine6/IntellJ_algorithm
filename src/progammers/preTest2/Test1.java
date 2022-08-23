@@ -1,9 +1,8 @@
 package progammers.preTest2;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-
+// 총 풀이시간 1시간 30분
+// 코드 작성 20분, 디버깅 1시간 10분
+// 재귀 실행시 sum의 값이 어떻게 변하는지 확인이 잘 안되었고 조합을 이상하게 만듬
 public class Test1 {
     static int result;
     public static void main(String[] args) {
