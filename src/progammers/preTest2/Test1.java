@@ -5,48 +5,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Test1 {
-    static int cnt;
-    static List<List<Integer>> list;
+    static int result;
     public static void main(String[] args) {
 //        int[] number = {-2, 3, 0, 2, -5};
         int[] number = {-3, -2, -1, 0, 1, 2, 3};
         int answer = 0;
-        cnt = 0;
+        result = 0;
         boolean[] visited = new boolean[number.length];
 
-        list = new ArrayList<>();
-        List<Integer> sum = new ArrayList<>();
-        combination(number, 0, sum, visited, 0);
+        combination(number, 0, 0, 0, visited);
 
-        System.out.println(list);
-
-        for (int i = 0; i < list.size(); i++) {
-            List<Integer> temp = list.get(i);
-            int result = 0;
-            for (int j = 0; j < temp.size(); j++) {
-                result += temp.get(j);
-            }
-            if(result == 0) {
-                answer++;
-            }
-        }
-
+        answer = result;
         System.out.println(answer);
     }
 
-    static void combination(int[] num, int idx, List<Integer> sum, boolean[] visited, int k) {
-        if (idx == 3) {
-            List<Integer> temp = new ArrayList<>();
-            temp.addAll(sum);
-            list.add(temp);
+    static void combination(int[] num, int idx, int sum, int cnt, boolean[] visited) {
+        if (cnt == 3) {
+            if (sum == 0) {
+                result++;
+            }
             return;
         }
-        for (int i = k; i < num.length; i++) {
+        for (int i = idx; i < num.length; i++) {
             if (!visited[i]) {
                 visited[i] = true;
-                sum.add(num[i]);
-                combination(num, idx + 1, sum, visited, i + 1);
-                sum.remove(sum.size() - 1);
+                sum += num[i];
+                combination(num, i + 1, sum, cnt + 1, visited);
+                sum -= num[i];
                 visited[i] = false;
             }
         }
