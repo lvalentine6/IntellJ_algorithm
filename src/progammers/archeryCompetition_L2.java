@@ -25,7 +25,6 @@ public class archeryCompetition_L2 {
         if (idx == n) {
             // 점수 계산 메서드 호출
             cul(info, result);
-            System.out.println(Arrays.toString(result));
             return;
         }
 
