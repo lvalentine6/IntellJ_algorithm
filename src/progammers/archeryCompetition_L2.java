@@ -25,6 +25,7 @@ public class archeryCompetition_L2 {
         if (idx == n) {
             // 점수 계산 메서드 호출
             cul(info, result);
+            System.out.println(Arrays.toString(result));
             return;
         }
 
@@ -62,6 +63,7 @@ public class archeryCompetition_L2 {
         }
 
         // 라이언의 점수가 높고 max보다 크다면
+        // 점수가 같은 경우에는 가장 낮은 점수를 더 많이 맞힌 경우가 저장됨
         if (r - a > max) {
             max = r - a;
             answer = info2;
