@@ -60,7 +60,6 @@ public class archeryCompetition_L2 {
                 a += score;
             }
         }
-
         // 라이언과 어피치의 점수 차이
         int dif = r - a;
 
