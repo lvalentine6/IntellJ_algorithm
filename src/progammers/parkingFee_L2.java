@@ -19,7 +19,7 @@ public class parkingFee_L2 {
             // 입차라면
             if (tempRecords[2].equals("IN")) {
                 map.put(tempRecords[1], tempRecords[0]);
-                // 출차라면 입차시간, 출차시간, 차량번호를 cul에 넘김
+                // 출차라면 입차시간, 출차시간, 차량번호를 parse에 넘김
             } else {
                 parse(map.get(tempRecords[1]), tempRecords[0], tempRecords[1]);
                 map.remove(tempRecords[1]);
