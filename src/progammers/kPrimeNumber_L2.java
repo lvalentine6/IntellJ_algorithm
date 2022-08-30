@@ -8,15 +8,16 @@ public class kPrimeNumber_L2 {
     static int answer;
 
     public static void main(String[] args) {
-//        int n = 437674;
-//        int k = 3;
+        int n = 437674;
+        int k = 3;
 
-        int n = 110011;
-        int k = 10;
+//        int n = 110011;
+//        int k = 10;
         answer = 0;
 
         // 진수 변환후 배열로
-        arr = Integer.toString(n, k).split("");
+        arr = Long.toString(n, k).split("");
+        System.out.println(Arrays.toString(arr));
 
         // 양쪽을 체크하기 위해 list 생성
         list = new ArrayList<>();
@@ -58,29 +59,15 @@ public class kPrimeNumber_L2 {
         char start = result.charAt(0);
         char end = result.charAt(result.length() - 1);
         if((start == 'n' && end == 'n') || (start == '0' && end == 'n') || (start == 'n' && end == '0') || (start == '0' && end == '0')) {
-            if(prime.length() == 1) {
-                if(!prime.equals("0")) {
-                    System.out.println(result);
-                    isPrimeNumber(prime);
-                }
-            } else if(prime.length() == 2) {
-                if(prime.charAt(prime.length() - 1) != '0') {
-                    System.out.println(result);
-                    isPrimeNumber(prime);
-                }
-            } else {
-                if(!prime.contains("0")) {
-                    System.out.println(result);
-                    isPrimeNumber(prime);
-                }
+            if(!prime.contains("0")) {
+                isPrimeNumber(prime);
             }
         }
     }
     // 소수 판별 메서드
     static void isPrimeNumber(String prime) {
         int n = Integer.parseInt(prime);
-//        System.out.println(n);
-        if(n == 1) {
+        if(n <= 1) {
             return;
         }
         boolean check = false;
