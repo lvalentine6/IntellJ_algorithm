@@ -5,7 +5,7 @@ import java.util.*;
 public class kPrimeNumber_L2 {
     static int answer;
     public static void main(String[] args) {
-        int n = 1100423411;
+        int n = 437674;
         int k = 3;
 
         answer = 0;
