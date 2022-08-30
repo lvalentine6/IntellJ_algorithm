@@ -8,8 +8,11 @@ public class kPrimeNumber_L2 {
     static int answer;
 
     public static void main(String[] args) {
-        int n = 437674;
-        int k = 3;
+//        int n = 437674;
+//        int k = 3;
+
+        int n = 110011;
+        int k = 10;
         answer = 0;
 
         // 진수 변환후 배열로
@@ -36,8 +39,8 @@ public class kPrimeNumber_L2 {
         if (depth == cnt) {
             String result = list.get(idx - cnt - 1) + str;
             result += list.get(idx);
+            check(result);
 //            System.out.println(result);
-            isPrimeNumber(result);
             return;
         }
 
@@ -49,32 +52,45 @@ public class kPrimeNumber_L2 {
         }
     }
 
-    // 소수 판별 메서드
-    static void isPrimeNumber(String result) {
-        int l = result.length() - 2;
+    // 조건 판별 메서드
+    static void check(String result) {
         String prime = result.substring(1, result.length() - 1);
         char start = result.charAt(0);
         char end = result.charAt(result.length() - 1);
-        boolean b = false;
-        if((start == 'n' && end == 'n') || (start == 0 && end == 'n') || (start == 'n' && end == '0') || (start == 0 && end == 0)) {
-            if(l == 1 && !(prime.equals(0))) {
-                return;
-            } else if (l == 2 && prime.charAt(prime.length() - 1) == 0) {
-                return;
+        if((start == 'n' && end == 'n') || (start == '0' && end == 'n') || (start == 'n' && end == '0') || (start == '0' && end == '0')) {
+            if(prime.length() == 1) {
+                if(!prime.equals("0")) {
+                    System.out.println(result);
+                    isPrimeNumber(prime);
+                }
+            } else if(prime.length() == 2) {
+                if(prime.charAt(prime.length() - 1) != '0') {
+                    System.out.println(result);
+                    isPrimeNumber(prime);
+                }
             } else {
-                String temp = prime.substring(1, prime.length() - 1);
-                if(!temp.contains("0")) {
-                    int n = Integer.parseInt(prime);
-                    for (int i = 2; i <= Math.sqrt(n); i++) {
-                        if(n % i == 0) {
-                            b = true;
-                            break;
-                        }
-                    }
+                if(!prime.contains("0")) {
+                    System.out.println(result);
+                    isPrimeNumber(prime);
                 }
             }
         }
-        if(!b) {
+    }
+    // 소수 판별 메서드
+    static void isPrimeNumber(String prime) {
+        int n = Integer.parseInt(prime);
+//        System.out.println(n);
+        if(n == 1) {
+            return;
+        }
+        boolean check = false;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if(n % i == 0) {
+                check = true;
+                break;
+            }
+        }
+        if(!check) {
             answer++;
         }
     }
