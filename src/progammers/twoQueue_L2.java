@@ -33,28 +33,25 @@ public class twoQueue_L2 {
 
         // 각 큐의 목표 합
         long target = (sumQ1 + sumQ2) / 2;
-        // idx 설정을 위한 mid
-        int mid = (queue1.length + queue2.length) / 2;
-        int start = 0;
-        int idx = 0;
-        int idx2 = mid;
+        // queue1의 idx 설정
+        int queue1Idx = 0;
+        // queue2의 idx 설정
+        int queue2Idx = (queue1.length + queue2.length) / 2;
 
         while (!(sumQ1 == target)) {
-            // idx의 범위가 list.size를 벗어나면 원소 합을 같게 만들수 없음
-            if(idx2 >= list.size() || start >= list.size()) {
+            // mid와 start의 범위가 list.size를 벗어나면 원소 합을 같게 만들수 없음
+            if(queue1Idx >= list.size() || queue2Idx >= list.size()) {
                 answer = -1;
                 break;
             }
             if (sumQ1 < sumQ2) {
-                idx = idx2;
-                sumQ2 -= list.get(idx);
-                sumQ1 += list.get(idx);
-                idx2++;
+                sumQ2 -= list.get(queue2Idx);
+                sumQ1 += list.get(queue2Idx);
+                queue2Idx++;
             } else {
-                idx = start;
-                sumQ1 -= list.get(idx);
-                sumQ2 += list.get(idx);
-                start++;
+                sumQ1 -= list.get(queue1Idx);
+                sumQ2 += list.get(queue1Idx);
+                queue1Idx++;
             }
             answer++;
         }
