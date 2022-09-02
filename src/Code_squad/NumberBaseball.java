@@ -22,6 +22,7 @@ public class NumberBaseball {
         Set<String> set = new HashSet<>();
         // 1부터 9까지 랜덤 생성후 set에 섭압
         while (set.size() < 3) {
+            // 정수범위 지정 : (int) Math.random() * (최댓값-최소값+1) + 최소값
             String temp = String.valueOf((int) (Math.random() * 7 + 1));
             set.add(temp);
         }
