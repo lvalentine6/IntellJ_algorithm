@@ -24,6 +24,7 @@ public class twoBit_L2 {
                 String temp = n.substring(0, 1) + "0" + n.substring(1);
                 // 10진수로 변환 후 answer 배열에 삽입
                 answer[i] = Long.parseLong(temp, 2);
+                // 홀수이면서 1과 0이 포함되어 있다면
             } else {
                 // 마지막으로 0이 나오는 인덱스 찾기
                 int idx = n.lastIndexOf("0");
