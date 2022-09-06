@@ -10,7 +10,7 @@ public class NumberBaseball {
         // 숫자 메서드 호출
         String n = makeNum();
         // 테스트를 위해 n 출력
-        System.out.println(n);
+        System.out.println("숫자 : " + n);
 
         // 입력 메서드 호출
         input(n);
