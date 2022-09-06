@@ -39,13 +39,13 @@ public class TriangleSnail_L2 {
                 sum++;
             }
             if(flag == 0) {
-                if(x < n - 1) {
+                if((x < n- 1) && (!visited[x + 1][y])) {
                     x++;
                 } else {
                     flag = 1;
                 }
             } else if (flag == 1) {
-                if(y < n - 1) {
+                if((y < n - 1) && (!visited[x][y + 1])) {
                     y++;
                 } else {
                     flag = 2;
