@@ -27,7 +27,7 @@ public class twoBit_L2 {
             } else {
                 // 마지막으로 0이 나오는 인덱스 찾기
                 int idx = n.lastIndexOf("0");
-                // subString으로 문자열 다시 만들기
+                // 문자열 다시 만들기
                 n = n.substring(0, idx) + "10" + n.substring(idx + 2);
                 answer[i] = Long.parseLong(n, 2);
             }
