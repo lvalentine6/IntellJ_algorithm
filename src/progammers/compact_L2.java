@@ -4,6 +4,7 @@ import java.util.*;
 
 public class compact_L2 {
     public static void main(String[] args) {
+//        String msg = "KAKAO";
         String msg = "TOBEORNOTTOBEORTOBEORNOT";
         List<Integer> list = new ArrayList<>();
 
@@ -24,25 +25,28 @@ public class compact_L2 {
             char w = msg.charAt(i);
             sb.append(w);
             int cnt = 1;
+
             while (map.containsKey(sb.toString())) {
-                list.add(map.get(sb.toString()));
                 int idx = i + cnt;
-                if(idx >= msg.length()) {
+                if (idx >= msg.length()) {
+                    list.add(map.get(sb.toString()));
                     break roof;
                 }
                 sb.append(msg.charAt(idx));
                 cnt++;
             }
             map.put(sb.toString(), start++);
-            if(sb.length() > 2) {
+            if (sb.length() > 2) {
                 i += cnt - 2;
-                System.out.println(sb);
             }
+
+            list.add(map.get(sb.delete(sb.length() - 1, sb.length()).toString()));
         }
 
-        System.out.println(list);
-        System.out.println(map);
-//        int[] answer = new int[5];
-//        System.out.println(Arrays.toString(answer));
+        int[] answer = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            answer[i] = list.get(i);
+        }
+        System.out.println(Arrays.toString(answer));
     }
 }
