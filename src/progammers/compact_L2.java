@@ -7,7 +7,7 @@ public class compact_L2 {
 //        String msg = "KAKAO";
         String msg = "TOBEORNOTTOBEORTOBEORNOT";
 
-        // 사전 번호를 담을 list
+        // 결과를 담을 list
         List<Integer> list = new ArrayList<>();
 
         // 사전을 담을 map 생성
@@ -24,11 +24,16 @@ public class compact_L2 {
 
         for (int i = 0; i < msg.length(); i++) {
             String s = "";
+            // i번째 글자 추가
             s += msg.charAt(i);
+            // i + 1 글자 추가
             for (int j = i + 1; j < msg.length(); j++) {
+                // 추가한 글자가 사전에 없다면
                 if (!map.containsKey(s + msg.charAt(j))) {
+                    // 사전에 추가하고 탐색 중단
                     map.put(s + msg.charAt(j), idx++);
                     break;
+                    // 사전에 있다면 없을때까지 한 글자씩 추가
                 } else {
                     s += msg.charAt(j);
                 }
@@ -39,11 +44,12 @@ public class compact_L2 {
             list.add(map.get(s));
         }
 
-        System.out.println(list);
+        // list를 배열에 복사
         int[] answer = new int[list.size()];
         for (int i = 0; i < list.size(); i++) {
             answer[i] = list.get(i);
         }
+
         System.out.println(Arrays.toString(answer));
     }
 }
