@@ -1,62 +1,69 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class visitedLength_L2 {
-    static int[] dx = {1, 0, 1, -1};
-    static int[] dy = {0, -1, 0, 0};
     static int answer;
-
+    static List<int[][]> list;
     public static void main(String[] args) {
         String dirs = "ULURRDLLU";
         answer = 0;
+        list = new ArrayList<>();
 
         int[][] arr = new int[11][11];
-        boolean[][] visited = new boolean[7][7];
+        Map<int[], boolean[]> map = new HashMap<>();
 
-        bfs(arr, dirs, 5, 5, visited);
-
-        System.out.println(Arrays.deepToString(arr));
+        for (int i = 0; i < 12; i++) {
+            for (int j = 0; j < 12; j++) {
+                int[] temp = new int[] {i, j};
+                boolean[] temp2 = new boolean[4];
+                map.put(temp, temp2);
+//                System.out.println(Arrays.toString(temp));
+//                System.out.println(Arrays.toString(map.get(temp)));
+            }
+        }
+        int[] xy = new int[]{5, 5};
+        System.out.println(map.containsKey(xy));
+//        bfs(arr, dirs, xy, map);
+        System.out.println(map.get(xy));
         System.out.println(answer);
     }
 
-    static void bfs(int[][] arr, String dirs, int x, int y, boolean[][] visited) {
-        Queue<int[]> queue = new LinkedList<>();
+    static void bfs(int[][] arr, String dirs, int[] xy, Map<int[], boolean[]> map) {
         String[] temp = dirs.split("");
-
+        int nx = xy[0];
+        int ny = xy[1];
         for (int i = 0; i < temp.length; i++) {
-            if (temp[i].equals("U")) {
-                if ((x < 12 && y < 12) && !(arr[x][y] == 1 && arr[x][y + 1] == 1)) {
-                    arr[x][y] = 1;
-                    arr[x][y + 1] = 1;
-                    y = y + 1;
-                    answer++;
-                }
-            } else if (temp[i].equals("D")) {
-                if ((x < 12 && y < 12) && !(arr[x][y] == 1 && arr[x][y - 1] == 1)) {
-                    arr[x][y] = 1;
-                    arr[x][y - 1] = 1;
-                    y = y - 1;
-                    answer++;
-                }
-            } else if (temp[i].equals("R")) {
-                if ((x < 12 && y < 12) && !(arr[x][y] == 1 && arr[x + 1][y] == 1)) {
-                    arr[x][y] = 1;
-                    arr[x + 1][y] = 1;
-                    x = x + 1;
-                    answer++;
-                }
-            } else {
-                if ((x < 12 && y < 12) && !(arr[x][y] == 1 && arr[x - 1][y] == 1)) {
-                    arr[x][y] = 1;
-                    arr[x - 1][y] = 1;
-                    x = x - 1;
-                    answer++;
+            if (nx < 12 && ny < 12) {
+                switch (temp[i]) {
+                    case "U":
+                        if(map.get(xy)[0]) {
+                            map.get(xy)[0] = true;
+                            answer++;
+                        }
+                        xy[1] += 1;
+                        break;
+                    case "D":
+                        if(map.get(xy)[1]) {
+                            map.get(xy)[1] = true;
+                            answer++;
+                        }
+                        xy[1] -= 1;
+                        break;
+                    case "R":
+                        if(map.get(xy)[2]) {
+                            map.get(xy)[2] = true;
+                            answer++;
+                        }
+                        xy[0] += 1;
+                        break;
+                    case "L":
+                        if(map.get(xy)[3]) {
+                            map.get(xy)[3] = true;
+                            answer++;
+                        }
+                        xy[0] -= 1;
+                        break;
                 }
             }
-            System.out.println("x : " + (x - 5));
-            System.out.println("y : " + (y - 5));
-
         }
     }
 }
