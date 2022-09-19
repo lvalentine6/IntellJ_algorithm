@@ -1,7 +1,5 @@
 package progammers;
 
-import java.util.*;
-
 public class visitedLength_L2 {
     static int answer;
 
