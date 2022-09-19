@@ -9,6 +9,7 @@ public class visitedLength_L2 {
         String dirs = "LULLLLLLU";
         answer = 0;
 
+        // 3차원 배열을 통해 경로 체크
         int[][][] visited = new int[11][11][4];
 
         search(dirs, 10, 10, visited);
