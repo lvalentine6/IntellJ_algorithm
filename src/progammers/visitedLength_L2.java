@@ -19,15 +19,19 @@ public class visitedLength_L2 {
         String[] temp = dirs.split("");
         for (int i = 0; i < temp.length; i++) {
             switch (temp[i]) {
+                // 경로가 위라면
                 case "U":
+                    // 범위를 벗어나면
                     if (x + 1 >= 11) {
                         continue;
                     }
+                    // 위에서 아래로 오는것과 아래에서 위로 가는건 같은 경로
                     if (visited[x][y][0] == 0) {
                         visited[x][y][0] = 1;
                         visited[x + 1][y][1] = 1;
                         answer++;
                     }
+                    // 움직이기
                     x += 1;
                     break;
                 case "D":
