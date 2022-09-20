@@ -10,11 +10,13 @@ public class visitedLength_L2 {
         // 3차원 배열을 통해 경로 체크
         int[][][] visited = new int[11][11][4];
 
-        search(dirs, 10, 10, visited);
+        // 경로 탐색 메서드 호출
+        search(dirs, 5, 5, visited);
 
         System.out.println(answer);
     }
 
+    // 경로 탐색 메서드
     static void search(String dirs, int x, int y, int[][][] visited) {
         String[] temp = dirs.split("");
         for (int i = 0; i < temp.length; i++) {
