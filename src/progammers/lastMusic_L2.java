@@ -1,36 +1,45 @@
 package progammers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
+// 3,6,7,8,9,12,15,18,19
+// 22,23,24,29
 public class lastMusic_L2 {
+    static String answer;
+    static String[] result;
+
     public static void main(String[] args) {
 //        String m = "ABCDEFG";
         String m = "CC#BCC#BCC#BCC#B";
 //        String m = "ABC";
-//        String[] musicinfos = {"12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"};
-        String[] musicinfos = {"03:00,03:30,FOO,CC#B", "04:00,04:08,BAR,CC#BCC#BCC#B"};
+//        String[] musicinfos = {"12:00,12:14,HELLO,CDEFGAB", "12:00,12:15,me1,CDEFGAB", "12:00,12:10,me2,CDEFGAB", "12:00,12:16,me3,CDEFGAB"};
+        String[] musicinfos = {"03:00,03:07,FOO,CC#B", "04:00,04:08,BAR,CC#BCC#BCC#B"};
 //        String[] musicinfos = {"12:00,12:14,HELLO,C#DEFGAB", "13:00,13:05,WORLD,ABCDEF"};
-        String answer = "";
+        answer = "(None)";
+        result = new String[2];
 
         for (int i = 0; i < musicinfos.length; i++) {
             String[] temp = musicinfos[i].split(",");
             // 플레이 타임
             int time = playTime(temp);
 
-            // 재생한 음계 목록
+            // 재생 시간에 맞춰 악보 만들기
             List<String> list = new ArrayList<>(make(temp, time));
 
             // 조합 검사
-            combination();
+            combination(list, time, temp, m);
         }
 
-        // 일치하는 조합이 없다면
-        if (answer.equals("")) {
-            answer = "(none)";
+        // result 배열에서 복사
+        if(result[1] != null) {
+            answer = result[1];
         }
+
         System.out.println(answer);
     }
+
+    // 재생시간을 계산하는 메서드
     static int playTime(String[] temp) {
         int difHour = Integer.parseInt(temp[1].split(":")[0]) - Integer.parseInt(temp[0].split(":")[0]);
         int difMinute = Integer.parseInt(temp[1].split(":")[1]) - Integer.parseInt(temp[0].split(":")[1]);
@@ -41,11 +50,13 @@ public class lastMusic_L2 {
         time += difMinute;
         return time;
     }
+
+    // 재생 시간에 맞춰 악보를 만드는 메서드
     static List<String> make(String[] temp, int time) {
         int cnt = 0;
         int idx = 0;
         List<String> list = new ArrayList<>();
-        while (cnt <= time) {
+        while (cnt < time) {
             if (idx >= temp[3].length()) {
                 idx = 0;
             }
@@ -60,21 +71,27 @@ public class lastMusic_L2 {
         }
         return list;
     }
-    static void combination() {
-        StringBuilder sb = new StringBuilder();
-        for (int j = 0; j < list.size(); j++) {
-            for (int k = 0; k < m.length(); k++) {
-                if (j >= list.size() - m.length()) {
-                    break roof2;
-                }
-                sb.append(list.get(j + k));
+
+    // 만들어진 악보로 조합 만들기
+    static void combination(List<String> list, int time, String[] temp, String m) {
+        int idx = 0;
+        while (idx < list.size()) {
+            StringBuilder sb = new StringBuilder();
+            for (int i = idx; i < list.size(); i++) {
+                sb.append(list.get(i));
                 if (sb.toString().equals(m)) {
-                    answer = temp[2];
+                    if(result[0] == null) {
+                        result[0] = String.valueOf(time);
+                        result[1] = temp[2];
+                        continue;
+                    }
+                    if (time > Integer.parseInt(result[0])) {
+                        result[0] = String.valueOf(time);
+                        result[1] = temp[2];
+                    }
                 }
             }
-            System.out.println(sb);
-            sb = new StringBuilder();
+            idx++;
         }
-    }
     }
 }
