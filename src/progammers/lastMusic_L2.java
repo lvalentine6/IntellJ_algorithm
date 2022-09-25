@@ -1,10 +1,7 @@
 package progammers;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-// 3,6,7,8,9,12,15,18,19
-// 22,23,24,29
 public class lastMusic_L2 {
     static String answer;
     static String[] result;
@@ -16,9 +13,13 @@ public class lastMusic_L2 {
 //        String[] musicinfos = {"12:00,12:14,HELLO,CDEFGAB", "12:00,12:15,me1,CDEFGAB", "12:00,12:10,me2,CDEFGAB", "12:00,12:16,me3,CDEFGAB"};
         String[] musicinfos = {"03:00,03:07,FOO,CC#B", "04:00,04:08,BAR,CC#BCC#BCC#B"};
 //        String[] musicinfos = {"12:00,12:14,HELLO,C#DEFGAB", "13:00,13:05,WORLD,ABCDEF"};
+
+        // answer None으로 초기화
         answer = "(None)";
+        // 정답을 저장할 배열 선언 (재생시간, 제목)
         result = new String[2];
 
+        // musicinfos 길이만큼 순회
         for (int i = 0; i < musicinfos.length; i++) {
             String[] temp = musicinfos[i].split(",");
             // 플레이 타임
@@ -41,6 +42,7 @@ public class lastMusic_L2 {
 
     // 재생시간을 계산하는 메서드
     static int playTime(String[] temp) {
+        // 시간을 분으로 변환하여 시간 반환
         int difHour = Integer.parseInt(temp[1].split(":")[0]) - Integer.parseInt(temp[0].split(":")[0]);
         int difMinute = Integer.parseInt(temp[1].split(":")[1]) - Integer.parseInt(temp[0].split(":")[1]);
         int time = 0;
@@ -57,9 +59,11 @@ public class lastMusic_L2 {
         int idx = 0;
         List<String> list = new ArrayList<>();
         while (cnt < time) {
+            // idx가 temp의 사이즈를 벗어나면 0으로 초기화
             if (idx >= temp[3].length()) {
                 idx = 0;
             }
+            // 다음 문자가 #이라면 #추가하여 list에 저장
             if (idx + 1 < temp[3].length() && temp[3].charAt(idx + 1) == '#') {
                 list.add(temp[3].charAt(idx) + "#");
                 idx += 2;
@@ -74,17 +78,21 @@ public class lastMusic_L2 {
 
     // 만들어진 악보로 조합 만들기
     static void combination(List<String> list, int time, String[] temp, String m) {
+        // idx부터 list의 크기만큼 문자열 조합을 생성하여 m과 같은지 비교
         int idx = 0;
         while (idx < list.size()) {
             StringBuilder sb = new StringBuilder();
             for (int i = idx; i < list.size(); i++) {
                 sb.append(list.get(i));
+                // 만들어진 조합이 m과 같으면
                 if (sb.toString().equals(m)) {
+                    // result 배열이 비어있다면 (처음으로 m과 같은 조합 발견)
                     if(result[0] == null) {
                         result[0] = String.valueOf(time);
                         result[1] = temp[2];
                         continue;
                     }
+                    // 문자열이 같고 재생시간이 길다면 result 배열 업데이트
                     if (time > Integer.parseInt(result[0])) {
                         result[0] = String.valueOf(time);
                         result[1] = temp[2];
