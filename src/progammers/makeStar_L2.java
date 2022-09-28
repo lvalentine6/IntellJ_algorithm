@@ -8,8 +8,8 @@ public class makeStar_L2 {
     static int[] yMinMax;
 
     public static void main(String[] args) {
-//        int[][] line = {{2, -1, 4}, {-2, -1, 4}, {0, -1, 1}, {5, -8, -12}, {5, 8, 12}};
-        int[][] line = {{1, -1, 0}, {-2, -1, 0}, {4, -1, 0}};
+        int[][] line = {{2, -1, 4}, {-2, -1, 4}, {0, -1, 1}, {5, -8, -12}, {5, 8, 12}};
+//        int[][] line = {{1, -1, 0}, {-2, -1, 0}, {4, -1, 0}};
 
         list = new ArrayList<>();
         xMinMax = new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE};
@@ -26,11 +26,12 @@ public class makeStar_L2 {
         List<String> arr = new ArrayList<>();
 
         // x,y의 좌표의 최솟값부터 최댓값까지 순회
-        for (int i = yMinMax[0]; i <= yMinMax[1]; i++) {
+        for (int i = yMinMax[1]; i >= yMinMax[0]; i--) {
             StringBuilder sb = new StringBuilder();
             for (int j = xMinMax[0]; j <= xMinMax[1]; j++) {
                 // 별을 만들면서 교점의 좌표에는 *찍기
                 boolean flag = false;
+                // list에서 교점과 일치하는지 확인
                 for (int k = 0; k < list.size(); k++) {
                     int x = list.get(k)[0];
                     int y = list.get(k)[1];
@@ -40,6 +41,7 @@ public class makeStar_L2 {
                         break;
                     }
                 }
+                // 교점이 아니면 . 찍기
                 if(!flag) {
                     sb.append(".");
                 }
@@ -48,7 +50,7 @@ public class makeStar_L2 {
         }
 
         // list 결과 반대로
-        Collections.reverse(arr);
+//        Collections.reverse(arr);
 
         // answer 배열에 복사
         String[] answer = new String[arr.size()];
