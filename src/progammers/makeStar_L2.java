@@ -49,9 +49,6 @@ public class makeStar_L2 {
             arr.add(sb.toString());
         }
 
-        // list 결과 반대로
-//        Collections.reverse(arr);
-
         // answer 배열에 복사
         String[] answer = new String[arr.size()];
         for (int i = 0; i < arr.size(); i++) {
