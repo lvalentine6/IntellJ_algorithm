@@ -9,6 +9,7 @@ public class numTriangle_L3 {
 
         int sum = 0;
 
+        // bottom-up 방식
         for (int i = triangle.length - 1; i >= 0; i--) {
             for (int j = 0; j < triangle[i].length - 1; j++) {
                 sum = triangle[i][j] > triangle[i][j + 1] ? triangle[i][j] : triangle[i][j + 1];
