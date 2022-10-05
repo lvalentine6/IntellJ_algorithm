@@ -1,36 +1,34 @@
 package progammers;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class nightWork_L3 {
     public static void main(String[] args) {
         int n = 4;
-        int[] works = {1, 1};
+        int[] works = {1,1};
         long answer = 0;
 
-        int idx = 0;
-        int cnt = 0;
-        while (n > 0) {
-            if (idx > works.length - 1) {
-                idx = 0;
-            }
-            if(cnt == works.length) {
-                break;
-            }
-            if (works[idx] == 0) {
-                cnt++;
-                continue;
-            }
-            works[idx]--;
-            n--;
-            idx++;
-        }
+        List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < works.length; i++) {
-            answer += Math.pow(works[i], 2);
+            list.add(works[i]);
         }
 
-        System.out.println(Arrays.toString(works));
+        while (n > 0) {
+            int idx = list.indexOf(Collections.max(list));
+            if(list.get(idx) == 0) {
+                break;
+            }
+            list.set(idx, list.get(idx) - 1);
+            n--;
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            answer += Math.pow(list.get(i), 2);
+        }
+
         System.out.println(answer);
 
     }
