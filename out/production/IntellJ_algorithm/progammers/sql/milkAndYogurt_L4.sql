@@ -1,0 +1,5 @@
+SELECT DISTINCT a.CART_ID
+FROM CART_PRODUCTS as a
+         INNER JOIN CART_PRODUCTS as b
+                    ON a.CART_ID = b.CART_ID AND a.NAME = 'Milk' AND b.NAME = 'Yogurt'
+ORDER BY a.CART_ID

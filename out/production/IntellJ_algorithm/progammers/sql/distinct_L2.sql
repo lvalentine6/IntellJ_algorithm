@@ -1,0 +1,3 @@
+-- (COUNT, SUM, MAX등의 집계함수는 NULL은 제외하고 집계함)
+SELECT COUNT(DISTINCT NAME) as count
+FROM ANIMAL_INS
