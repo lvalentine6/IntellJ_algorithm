@@ -75,7 +75,7 @@ public class CharacterCheck {
                 sb.append(ch[1]);
             }
         }
-
+        PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
         String answer = sb.toString();
         System.out.println(answer);
     }
