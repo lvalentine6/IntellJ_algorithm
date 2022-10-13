@@ -5,6 +5,8 @@ public class wayToSchool_L3 {
         int m = 4;
         int n = 3;
         int[][] puddles = {{2,2}};
+        int answer = 0;
+
 
 
     }
