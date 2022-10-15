@@ -9,13 +9,17 @@ public class wayToSchool_L3 {
         int[][] puddles = {{2, 2}};
         int answer = 0;
 
+        // n x m 배열 초기화
         int[][] arr = new int[n][m];
+        // 시작점은 1
         arr[0][0] = 1;
 
+        // 웅덩이 배열에서 -1로 설정
         for (int i = 0; i < puddles.length; i++) {
             arr[puddles[i][0] - 1][puddles[i][1] - 1] = -1;
         }
 
+        // dp 탐색
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (arr[i][j] == -1) {
