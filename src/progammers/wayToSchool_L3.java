@@ -16,7 +16,7 @@ public class wayToSchool_L3 {
 
         // 웅덩이 배열에서 -1로 설정
         for (int i = 0; i < puddles.length; i++) {
-            arr[puddles[i][0] - 1][puddles[i][1] - 1] = -1;
+            arr[puddles[i][1] - 1][puddles[i][0] - 1] = -1;
         }
 
         // dp 탐색
