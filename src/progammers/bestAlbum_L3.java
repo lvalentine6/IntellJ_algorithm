@@ -42,12 +42,15 @@ public class bestAlbum_L3 {
                     secondIdx = j;
                 }
             }
+            // 재생된 노래 리스트에 저장
             result.add(firstIdx);
+            // 두번째로 재생된 노래가 있다면 리스트에 저장
             if (secondIdx >= 0) {
                 result.add(secondIdx);
             }
         }
 
+        // 리스트값 배열로 복사
         int[] answer = new int[result.size()];
         for (int i = 0; i < result.size(); i++) {
             answer[i] = result.get(i);
