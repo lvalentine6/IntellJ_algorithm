@@ -19,7 +19,7 @@ public class bestAlbum_L3 {
         Collections.sort(list, (o1, o2) -> genreMap.get(o2) - genreMap.get(o1));
 
         for (int i = 0; i < list.size(); i++) {
-
+            // 정렬된 리스트 가져오기
             String s = list.get(i);
 
             // 첫번째로 많이 재생된 노래 찾기
