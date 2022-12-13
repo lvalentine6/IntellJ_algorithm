@@ -17,7 +17,7 @@ public class NumberBlock_L2 {
             boolean flag = false;
 
             // i가 1이면 지나감
-            if(i == 1) {
+            if (i == 1) {
                 answer[idx++] = 0;
                 continue;
             }
@@ -34,7 +34,7 @@ public class NumberBlock_L2 {
             }
 
             // 소수라면 1 삽입
-            if(!flag) {
+            if (!flag) {
                 answer[idx++] = 1;
             }
         }

@@ -19,7 +19,7 @@ public class DartGame2 {
 
         // 스텍을 이용해서 그룹별로 뽑기
         Stack<Integer> stk = new Stack<>();
-        while(matcher.find()) {
+        while (matcher.find()) {
             // 점수
             int num = Integer.parseInt(matcher.group(1));
 
@@ -34,7 +34,7 @@ public class DartGame2 {
             System.out.println(stk);
             // 스타상, 아차상
             if (matcher.group(3).equals("*")) {
-                if(!stk.isEmpty()) {
+                if (!stk.isEmpty()) {
                     int top = stk.pop();
                     stk.push(top * 2);
                 }
@@ -45,8 +45,9 @@ public class DartGame2 {
             }
             stk.push(num);
         }
-        while(!stk.isEmpty())
+        while (!stk.isEmpty()) {
             answer += stk.pop();
+        }
         System.out.println(answer);
     }
 }

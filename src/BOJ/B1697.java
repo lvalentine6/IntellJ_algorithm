@@ -27,8 +27,9 @@ public class B1697 {
         while (!queue.isEmpty()) {
             int temp = queue.poll();
             // n이 m과 같아지면
-            if(temp == m) {
-                cnt = visited[temp] - 1; return;
+            if (temp == m) {
+                cnt = visited[temp] - 1;
+                return;
             }
             // 범위를 벗어나지 않고 방문한적이 없다면
             if (temp - 1 >= 0 && visited[temp - 1] == 0) {

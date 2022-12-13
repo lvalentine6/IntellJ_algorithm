@@ -2,7 +2,7 @@ package BOJ;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.StringTokenizer;
 
 public class B11053 {
     public static void main(String[] args) throws Exception {
@@ -18,12 +18,12 @@ public class B11053 {
         }
 
         // dp
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             // dp의 값 1로 초기화
             dp[i] = 1;
-            for(int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++) {
                 // arr를 돌며 i가 j의 값보다 크고 이전 dp의 크기보다 작으면
-                if(arr[j] < arr[i] && dp[i] <= dp[j]) {
+                if (arr[j] < arr[i] && dp[i] <= dp[j]) {
                     dp[i] = dp[j] + 1;
                 }
             }
@@ -31,8 +31,8 @@ public class B11053 {
 
         // dp에서 최댓값 찾기
         int answer = -1;
-        for(int i = 0; i < n; i++) {
-            if(dp[i] > answer) {
+        for (int i = 0; i < n; i++) {
+            if (dp[i] > answer) {
                 answer = dp[i];
             }
         }

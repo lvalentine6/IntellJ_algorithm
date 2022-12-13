@@ -1,6 +1,9 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class NumberArray {
     public static void main(String[] args) {
@@ -9,7 +12,7 @@ public class NumberArray {
         String s = String.valueOf(n);
         String[] temp = s.split("");
         List<String> list = new ArrayList<>();
-        for(String i : temp) {
+        for (String i : temp) {
             list.add(i);
         }
         Collections.reverse(list);

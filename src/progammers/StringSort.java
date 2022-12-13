@@ -14,7 +14,7 @@ public class StringSort {
         List<String> list = new ArrayList<>();
 
         // 리스트 맨 앞에 n번째 문자열 붙이기
-        for (int i=0; i<strings.length; i++) {
+        for (int i = 0; i < strings.length; i++) {
             list.add(strings[i].charAt(n) + strings[i]);
         }
 
@@ -22,7 +22,7 @@ public class StringSort {
         Collections.sort(list);
 
         // 첫번째 문자 자르고 반환
-        for (int i=0; i<list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             answer[i] = list.get(i).substring(1, list.get(i).length());
         }
 

@@ -1,6 +1,9 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class fileSort_L2 {
     public static void main(String[] args) {
@@ -22,17 +25,17 @@ public class fileSort_L2 {
             int cnt = 0;
             for (int j = 0; j < temp.length(); j++) {
                 // number 문자가 나오지 않았다는것
-                if(!flag) {
-                    if(Character.isDigit(temp.charAt(j))) {
+                if (!flag) {
+                    if (Character.isDigit(temp.charAt(j))) {
                         flag = true;
                         start = j;
                         cnt++;
                     }
                     // number 문자가 시작 되었으면
                 } else {
-                    if(cnt != 5) {
+                    if (cnt != 5) {
                         // 숫자라면
-                        if(Character.isDigit(temp.charAt(j))) {
+                        if (Character.isDigit(temp.charAt(j))) {
                             cnt++;
                             // number 부분이 끝났다는 것
                         } else {
@@ -46,12 +49,12 @@ public class fileSort_L2 {
                 }
             }
             // end가 0이면 tail이 없다는 의미
-            if(end == 0) {
+            if (end == 0) {
                 end = temp.length() - 1;
             }
 
             // FIle 리스트에 값 삽입
-            list.add(new File(temp.substring(0, start), temp.substring(start, end + 1), temp.substring(end + 1) ,""));
+            list.add(new File(temp.substring(0, start), temp.substring(start, end + 1), temp.substring(end + 1), ""));
         }
 
         // 1순위 - head값을 오름차순, 2순위 number의 값을 오름차순으로 정렬
@@ -64,6 +67,7 @@ public class fileSort_L2 {
 
         System.out.println(Arrays.toString(answer));
     }
+
     // File 클래스
     static class File {
         String head;
@@ -84,10 +88,12 @@ public class fileSort_L2 {
             str = head + number + tail;
             return str;
         }
+
         // head를 소문자로 바꾸어 반환하는 메서드
         public String getHead() {
             return head.toLowerCase();
         }
+
         // number를 Integer로 바꾸어 반환하는 메서드
         public int getNumber() {
             return Integer.parseInt(number);

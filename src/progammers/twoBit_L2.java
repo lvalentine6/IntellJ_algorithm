@@ -11,7 +11,7 @@ public class twoBit_L2 {
             System.out.println(Long.toString(numbers[i], 2));
 
             // 짝수라면
-            if(numbers[i] % 2 == 0) {
+            if (numbers[i] % 2 == 0) {
                 answer[i] = numbers[i] + 1;
                 continue;
             }
@@ -19,7 +19,7 @@ public class twoBit_L2 {
             String n = Long.toString(numbers[i], 2);
 
             // 홀수이면서 1로만 이루어져 있다면
-            if(!n.contains("0")) {
+            if (!n.contains("0")) {
                 // String 2번째 자리에 0 삽입
                 String temp = n.substring(0, 1) + "0" + n.substring(1);
                 // 10진수로 변환 후 answer 배열에 삽입

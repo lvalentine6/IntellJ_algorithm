@@ -16,13 +16,13 @@ public class B11723_2 {
         for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             String s = st.nextToken();
-            if(st.hasMoreTokens()) {
-                if(s.equals("add")) {
+            if (st.hasMoreTokens()) {
+                if (s.equals("add")) {
                     bs.set(Integer.parseInt(st.nextToken()));
                 } else if (s.equals("remove")) {
                     bs.clear(Integer.parseInt(st.nextToken()));
                 } else if (s.equals("check")) {
-                    if(bs.get(Integer.parseInt(st.nextToken()))) {
+                    if (bs.get(Integer.parseInt(st.nextToken()))) {
                         sb.append(1).append("\n");
                     } else {
                         sb.append(0).append("\n");
@@ -30,13 +30,13 @@ public class B11723_2 {
                 } else if (s.equals("toggle")) {
                     bs.flip(Integer.parseInt(st.nextToken()));
                 }
-            } else if(s.equals("all")) {
+            } else if (s.equals("all")) {
                 bs.set(1, 21, true);
             } else {
                 bs.clear();
             }
         }
-        
+
         System.out.println(sb);
     }
 }

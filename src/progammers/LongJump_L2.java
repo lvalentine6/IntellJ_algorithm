@@ -5,7 +5,7 @@ public class LongJump_L2 {
         int n = 1;
         long answer = 0;
 
-        if(n == 1) {
+        if (n == 1) {
             System.out.println(1);
         }
 

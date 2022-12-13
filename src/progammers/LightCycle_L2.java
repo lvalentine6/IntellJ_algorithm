@@ -29,8 +29,9 @@ public class LightCycle_L2 {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 for (int k = 0; k < 4; k++) {
-                    if(!visited[i][j][k])
-                    list.add(cycle(grid, i, j, k));
+                    if (!visited[i][j][k]) {
+                        list.add(cycle(grid, i, j, k));
+                    }
                 }
             }
         }

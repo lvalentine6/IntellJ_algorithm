@@ -43,11 +43,17 @@ public class Picture_L2 {
             // 거리
             int length = Integer.parseInt(String.valueOf(s.charAt(4)));
             if (op == '=') {
-                if (!(Math.abs(first - second) - 1 == length)) return false;
+                if (!(Math.abs(first - second) - 1 == length)) {
+                    return false;
+                }
             } else if (op == '>') {
-                if (!(Math.abs(first - second) - 1 > length)) return false;
+                if (!(Math.abs(first - second) - 1 > length)) {
+                    return false;
+                }
             } else {
-                if (!(Math.abs(first - second) - 1 < length)) return false;
+                if (!(Math.abs(first - second) - 1 < length)) {
+                    return false;
+                }
             }
         }
         return true;

@@ -46,7 +46,7 @@ public class B2178 {
                     continue;
                 }
                 // 이미 탐색한 노드거나 0인 노드라면
-                if(visit[nx][ny] || arr[nx][ny] == 0) {
+                if (visit[nx][ny] || arr[nx][ny] == 0) {
                     continue;
                 }
                 queue.add(new int[]{nx, ny});

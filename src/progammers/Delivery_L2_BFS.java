@@ -1,17 +1,19 @@
 package progammers;
 
-import org.w3c.dom.Node;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class Delivery_L2_BFS {
     static List<ArrayList<Node>> list;
     static int cnt;
+
     public static void main(String[] args) {
         int n = 6;
         int k = 4;
 //        int[][] road = {{1, 2, 1}, {2, 3, 3}, {5, 2, 2}, {1, 4, 2}, {5, 3, 1}, {5, 4, 2}};
-        int[][] road = {{1,2,1},{1,3,2},{2,3,2},{3,4,3},{3,5,2},{3,5,3},{5,6,1}};
+        int[][] road = {{1, 2, 1}, {1, 3, 2}, {2, 3, 2}, {3, 4, 3}, {3, 5, 2}, {3, 5, 3}, {5, 6, 1}};
         int answer = 0;
 
         // 자기 자신의 마을은 무조건 방문
@@ -40,6 +42,7 @@ public class Delivery_L2_BFS {
         System.out.println(answer);
 
     }
+
     // BFS 탐색 메서드
     static void bfs(int n, int k, int[] visited) {
         // 탐색을 위한 queue
@@ -56,7 +59,7 @@ public class Delivery_L2_BFS {
         while (!queue.isEmpty()) {
             Node node = queue.poll();
             // 방문 예정 마을이 이동거리의 합 보다 크거나 같지 않으면
-            if(!(visited[node.b] <= visited[node.a] + node.l)) {
+            if (!(visited[node.b] <= visited[node.a] + node.l)) {
                 visited[node.b] = visited[node.a] + node.l;
                 queue.addAll(list.get(node.b));
             }
@@ -64,7 +67,7 @@ public class Delivery_L2_BFS {
 
         // 출력
         for (int i = 2; i < n + 1; i++) {
-            if(visited[i] <= k) {
+            if (visited[i] <= k) {
                 cnt++;
             }
         }

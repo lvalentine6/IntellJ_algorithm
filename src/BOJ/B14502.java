@@ -2,7 +2,12 @@ package BOJ;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
 // 벽을 세우는 알고리즘 -> 모르겠는데 재귀로 완탐하자
 // 바이러스를 퍼트리는 알고리즘 (BFS)
@@ -93,14 +98,14 @@ public class B14502 {
                     int nx = qTemp[0] + dx[i];
                     int ny = qTemp[1] + dy[i];
 
-                    if(nx < 0 || ny < 0 || nx >= n || ny >= m) {
+                    if (nx < 0 || ny < 0 || nx >= n || ny >= m) {
                         continue;
                     }
 
-                    if(array[nx][ny] == 0 && !virusVisited[nx][ny]) {
+                    if (array[nx][ny] == 0 && !virusVisited[nx][ny]) {
                         virusVisited[nx][ny] = true;
                         array[nx][ny] = 2;
-                        queue.add(new int[] {nx, ny});
+                        queue.add(new int[]{nx, ny});
                     }
                 }
             }
@@ -116,7 +121,7 @@ public class B14502 {
         int cnt = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                if(array[i][j] == 0) {
+                if (array[i][j] == 0) {
                     cnt++;
                 }
             }

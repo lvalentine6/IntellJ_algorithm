@@ -1,9 +1,8 @@
 package progammers;
 
-import java.util.*;
-
 public class kPrimeNumber_L2 {
     static int answer;
+
     public static void main(String[] args) {
         int n = 437674;
         int k = 3;
@@ -15,7 +14,9 @@ public class kPrimeNumber_L2 {
 
         for (int i = 0; i < arr.length; i++) {
             // 빈 문자열일 경우 통과
-            if(arr[i].equals("")) continue;
+            if (arr[i].equals("")) {
+                continue;
+            }
             isPrimeNumber(arr[i]);
         }
 
@@ -29,19 +30,19 @@ public class kPrimeNumber_L2 {
         long n = Long.parseLong(prime);
 
         // 1은 소수가 아님
-        if(n <= 1) {
+        if (n <= 1) {
             return;
         }
 
         boolean check = false;
         for (int i = 2; i <= Math.sqrt(n); i++) {
             // 나누어 떨어지면 소수가 아님
-            if(n % i == 0) {
+            if (n % i == 0) {
                 check = true;
                 break;
             }
         }
-        if(!check) {
+        if (!check) {
             answer++;
         }
     }

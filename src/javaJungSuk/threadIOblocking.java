@@ -1,6 +1,6 @@
 package javaJungSuk;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class threadIOblocking {
     public static void main(String[] args) throws Exception {

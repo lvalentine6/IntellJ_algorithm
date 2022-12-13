@@ -1,8 +1,5 @@
 package progammers;
 
-import java.util.Arrays;
-import java.util.regex.Pattern;
-
 public class DartGame {
     public static void main(String[] args) {
         String dartResult = "1D#2S*3S";
@@ -36,14 +33,14 @@ public class DartGame {
                 tempString = "";
             } else {
                 // 스타상, 아차상
-              if(c == '#') {
-                  score[idx-1] *= -1;
-              } else {
-                  score[idx-1] *= 2;
-                  if(idx - 2 <= 0) {
-                      score[idx - 2] *= 2;
-                  }
-              }
+                if (c == '#') {
+                    score[idx - 1] *= -1;
+                } else {
+                    score[idx - 1] *= 2;
+                    if (idx - 2 <= 0) {
+                        score[idx - 2] *= 2;
+                    }
+                }
             }
         }
 

@@ -15,7 +15,7 @@ public class speedCamera_L3 {
 
         for (int i = 0; i < routes.length; i++) {
             // 현재 자동차의 진입시간이 이전 자동차의 진출시간보다 뒤라면
-            if(routes[i][0] > min) {
+            if (routes[i][0] > min) {
                 min = routes[i][1];
                 answer++;
             }

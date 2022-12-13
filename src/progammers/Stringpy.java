@@ -1,9 +1,5 @@
 package progammers;
 
-import java.util.Collections;
-import java.util.Locale;
-import java.util.stream.Stream;
-
 public class Stringpy {
     public static void main(String[] args) {
         String s = "pPoooyY";
@@ -11,16 +7,16 @@ public class Stringpy {
         int pc = 0;
         int yc = 0;
 
-        for(int i=0; i<s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             s = s.toLowerCase();
             char ch = s.charAt(i);
-            if(ch == 'p') {
+            if (ch == 'p') {
                 pc++;
-            } else if(ch == 'y') {
+            } else if (ch == 'y') {
                 yc++;
             }
         }
-        if(pc == yc) {
+        if (pc == yc) {
             answer = true;
         } else {
             answer = false;

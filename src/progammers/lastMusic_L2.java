@@ -2,6 +2,7 @@ package progammers;
 
 import java.util.ArrayList;
 import java.util.List;
+
 public class lastMusic_L2 {
     static String answer;
     static String[] result;
@@ -33,7 +34,7 @@ public class lastMusic_L2 {
         }
 
         // result 배열에서 복사
-        if(result[1] != null) {
+        if (result[1] != null) {
             answer = result[1];
         }
 
@@ -87,7 +88,7 @@ public class lastMusic_L2 {
                 // 만들어진 조합이 m과 같으면
                 if (sb.toString().equals(m)) {
                     // result 배열이 비어있다면 (처음으로 m과 같은 조합 발견)
-                    if(result[0] == null) {
+                    if (result[0] == null) {
                         result[0] = String.valueOf(time);
                         result[1] = temp[2];
                         continue;

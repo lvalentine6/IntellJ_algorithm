@@ -1,6 +1,8 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class kPrimeNumber_L2_fail {
     static String[] arr;
@@ -58,26 +60,28 @@ public class kPrimeNumber_L2_fail {
         String prime = result.substring(1, result.length() - 1);
         char start = result.charAt(0);
         char end = result.charAt(result.length() - 1);
-        if((start == 'n' && end == 'n') || (start == '0' && end == 'n') || (start == 'n' && end == '0') || (start == '0' && end == '0')) {
-            if(!prime.contains("0")) {
+        if ((start == 'n' && end == 'n') || (start == '0' && end == 'n') || (start == 'n' && end == '0') || (
+                start == '0' && end == '0')) {
+            if (!prime.contains("0")) {
                 isPrimeNumber(prime);
             }
         }
     }
+
     // 소수 판별 메서드
     static void isPrimeNumber(String prime) {
         int n = Integer.parseInt(prime);
-        if(n <= 1) {
+        if (n <= 1) {
             return;
         }
         boolean check = false;
         for (int i = 2; i <= Math.sqrt(n); i++) {
-            if(n % i == 0) {
+            if (n % i == 0) {
                 check = true;
                 break;
             }
         }
-        if(!check) {
+        if (!check) {
             answer++;
         }
     }

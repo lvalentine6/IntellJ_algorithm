@@ -15,9 +15,9 @@ public class PhoneNumber_L2 {
         }
 
         // containsKey과 substring으로 접두어인지 검사
-        for (int i = 0;i < phone_book.length; i++) {
+        for (int i = 0; i < phone_book.length; i++) {
             for (int j = 0; j < phone_book[i].length(); j++) {
-                if(hs.containsKey(phone_book[i].substring(0,j))) {
+                if (hs.containsKey(phone_book[i].substring(0, j))) {
                     answer = false;
                 }
             }

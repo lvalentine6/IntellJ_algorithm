@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class B17219 {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -29,7 +29,6 @@ public class B17219 {
         for (int i = 0; i < m; i++) {
             bw.write(hm.get(br.readLine()) + "\n");
         }
-
 
         bw.flush();
         bw.close();

@@ -1,6 +1,7 @@
 package progammers;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.PriorityQueue;
 
 public class MinNumber_L2 {
     public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class MinNumber_L2 {
         }
 
         // 최솟값과 최댓값을 빼서 처리
-       for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < A.length; i++) {
             int min = (int) Aqueue.poll();
             int max = (int) Bqueue.poll();
             answer += min * max;

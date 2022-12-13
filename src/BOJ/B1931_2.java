@@ -22,15 +22,15 @@ public class B1931_2 {
         // 정렬 (람다 사용)
         Arrays.sort(arr, (o1, o2) -> {
             // 종료시간이 같은 경우 시작시간을 기준으로 오름차순 정렬
-            if(o1[1] == o2[1]) {
+            if (o1[1] == o2[1]) {
                 return o1[0] - o2[0];
             }
             // 종료 시간을 기준으로 오름차순 정렬
-         return o1[1] - o2[1];
+            return o1[1] - o2[1];
         });
         // 정렬후 카운팅
         for (int i = 0; i < n; i++) {
-            if(preEnd <= arr[i][0]) {
+            if (preEnd <= arr[i][0]) {
                 preEnd = arr[i][1];
                 cnt++;
             }

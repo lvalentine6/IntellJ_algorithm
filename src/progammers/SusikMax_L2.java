@@ -1,10 +1,10 @@
 package progammers;
 
-import javax.script.ScriptException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
+import javax.script.ScriptException;
 
 public class SusikMax_L2 {
     public static void main(String[] args) throws ScriptException {
@@ -20,7 +20,8 @@ public class SusikMax_L2 {
             list.add(st.nextToken());
         }
         // 모든 연산자 배열
-        String[][] arr = {{"+", "-", "*"}, {"+", "*", "-"}, {"-", "+", "*"}, {"-", "*", "+"}, {"*", "+", "-"}, {"*", "-", "+"}};
+        String[][] arr = {{"+", "-", "*"}, {"+", "*", "-"}, {"-", "+", "*"}, {"-", "*", "+"}, {"*", "+", "-"},
+                {"*", "-", "+"}};
 
         for (int j = 0; j < arr.length; j++) {
             // 분리한 문자열을 복사
@@ -36,7 +37,7 @@ public class SusikMax_L2 {
                         listTemp.remove(i);
                         listTemp.remove(i);
                         // 삭제로 인해 3개가 1개로 바뀌므로 i의 값 -2
-                        i-=2;
+                        i -= 2;
                     }
                 }
             }

@@ -3,6 +3,7 @@ package progammers;
 public class N_Queen_L2 {
     static int[] arr;
     static int cnt;
+
     public static void main(String[] args) {
         int n = 4;
         int answer = 0;
@@ -11,7 +12,7 @@ public class N_Queen_L2 {
         arr = new int[n];
 
         // BackTracking 호출
-        bt(n ,0);
+        bt(n, 0);
 
         answer = cnt;
         System.out.println(answer);
@@ -20,7 +21,7 @@ public class N_Queen_L2 {
     // BackTracking 메서드
     static void bt(int n, int row) {
         // 모든 queen이 다 놓였다면
-        if(n == row) {
+        if (n == row) {
             cnt++;
             return;
         }
@@ -28,8 +29,8 @@ public class N_Queen_L2 {
         for (int i = 0; i < n; i++) {
             arr[row] = i;
             // 리턴값이 true이면(열을 늘려가며) BackTracking
-            if(check(row)) {
-                bt(n ,row + 1);
+            if (check(row)) {
+                bt(n, row + 1);
             }
         }
     }
@@ -38,11 +39,11 @@ public class N_Queen_L2 {
     static boolean check(int row) {
         for (int i = 0; i < row; i++) {
             // 0부터 row - 1까지 순환하면서 같은 행인지 검사
-            if(arr[i] == arr[row]) {
+            if (arr[i] == arr[row]) {
                 return false;
             }
             // 대각선 확인 (두 점의 기울기가 같으면 대각선에 위치한 것)
-            if(Math.abs(row - i) == Math.abs(arr[row] - arr[i])) {
+            if (Math.abs(row - i) == Math.abs(arr[row] - arr[i])) {
                 return false;
             }
         }

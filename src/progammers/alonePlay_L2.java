@@ -1,9 +1,13 @@
 package progammers;
-import java.util.*;
+
+import java.util.Collections;
+import java.util.PriorityQueue;
+
 public class alonePlay_L2 {
     static PriorityQueue<Integer> queue;
+
     public static void main(String[] args) {
-        int[] cards = {8,6,3,7,2,5,1,4};
+        int[] cards = {8, 6, 3, 7, 2, 5, 1, 4};
         int answer = 0;
 
         // cards 크기가 선택한 숫자 n
@@ -14,20 +18,21 @@ public class alonePlay_L2 {
         queue = new PriorityQueue<>(Collections.reverseOrder());
 
         // 열지 않은 상자라면
-        for(int i = 0; i < n; i++) {
-            if(!visited[i]) {
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
                 dfs(cards, i, visited, 0);
             }
         }
 
         // queue 크기가 1이면 1번 상자 그룹밖에 없다는 의미
-        if(queue.size() != 1) {
+        if (queue.size() != 1) {
             answer = queue.poll() * queue.poll();
         }
     }
+
     static void dfs(int[] cards, int num, boolean[] visited, int cnt) {
         // 열었던 상자라면
-        if(visited[num]) {
+        if (visited[num]) {
             // 상자의 개수를 queue에 저장하고 리턴
             queue.add(cnt);
             return;

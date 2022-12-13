@@ -8,8 +8,8 @@ import java.util.Collections;
 
 public class B2667 {
     static int n;
-    static int[] dx = {1,-1,0,0};
-    static int[] dy = {0,0,1,-1};
+    static int[] dx = {1, -1, 0, 0};
+    static int[] dy = {0, 0, 1, -1};
     static int[][] arr;
     static int cnt;
 
@@ -32,7 +32,7 @@ public class B2667 {
         // 인접행렬에서 dfs 실행
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if(arr[i][j] == 1) {
+                if (arr[i][j] == 1) {
                     cnt = 1;
                     dfs(i, j);
                     answer++;
@@ -43,7 +43,7 @@ public class B2667 {
         // cnt 정렬
         Collections.sort(list);
         System.out.println(answer);
-        for(int i : list) {
+        for (int i : list) {
             System.out.println(i);
         }
     }
@@ -53,11 +53,11 @@ public class B2667 {
             int nx = x + dx[i];
             int ny = y + dy[i];
             // 이동한 좌표가 범위를 벗어나면
-            if(nx >= n || ny >= n || nx < 0 || ny < 0) {
+            if (nx >= n || ny >= n || nx < 0 || ny < 0) {
                 continue;
             }
             // 연결되어 있지 않다면
-            if(arr[nx][ny] == 0) {
+            if (arr[nx][ny] == 0) {
                 continue;
             }
             // 탐색한 집은 0으로 바꾸기

@@ -35,11 +35,15 @@ public class B11723 {
         } else if (string.equals("check")) {
             if (set.contains(num)) {
                 sb.append(1).append("\n");
-            } else sb.append(0).append("\n");
+            } else {
+                sb.append(0).append("\n");
+            }
         } else if (string.equals("toggle")) {
             if (set.contains(num)) {
                 set.remove(num);
-            } else set.add(num);
+            } else {
+                set.add(num);
+            }
         }
     }
 

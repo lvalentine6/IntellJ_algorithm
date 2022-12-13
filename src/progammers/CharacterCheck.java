@@ -1,6 +1,12 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Set;
 
 public class CharacterCheck {
     public static void main(String[] args) {
@@ -19,8 +25,8 @@ public class CharacterCheck {
         // 지표별 특성 Map 삽입
         for (int i = 1; i <= 4; i++) {
             Map<Character, Integer> subMap = new HashMap<>();
-            subMap.put(character[i-1].charAt(0), 0);
-            subMap.put(character[i-1].charAt(1), 0);
+            subMap.put(character[i - 1].charAt(0), 0);
+            subMap.put(character[i - 1].charAt(1), 0);
             list.add(subMap);
         }
 
@@ -31,33 +37,39 @@ public class CharacterCheck {
             // 점수를 위한 변수
             int num = 0;
             // 1~3점 이면
-            if(choices[i] < 4) {
+            if (choices[i] < 4) {
                 switch (choices[i]) {
-                    case 1 : num = 3;
-                    break;
-                    case 2 : num = 2;
-                    break;
-                    case 3 : num = 1;
-                    break;
+                    case 1:
+                        num = 3;
+                        break;
+                    case 2:
+                        num = 2;
+                        break;
+                    case 3:
+                        num = 1;
+                        break;
                 }
                 // 각 유형에 맞는 점수 Map에 삽입
                 for (int j = 0; j < list.size(); j++) {
-                    if(list.get(j).get(c1) != null) {
+                    if (list.get(j).get(c1) != null) {
                         list.get(j).put(c1, list.get(j).getOrDefault(c1, 0) + num);
                     }
                 }
                 // 5~7점 이면
-            } else if(choices[i] > 4) {
+            } else if (choices[i] > 4) {
                 switch (choices[i]) {
-                    case 5 : num = 1;
-                    break;
-                    case 6 : num = 2;
-                    break;
-                    case 7 : num = 3;
-                    break;
+                    case 5:
+                        num = 1;
+                        break;
+                    case 6:
+                        num = 2;
+                        break;
+                    case 7:
+                        num = 3;
+                        break;
                 }
                 for (int j = 0; j < list.size(); j++) {
-                    if(list.get(j).get(c2) != null) {
+                    if (list.get(j).get(c2) != null) {
                         list.get(j).put(c2, list.get(j).getOrDefault(c2, 0) + num);
                     }
                 }
@@ -69,9 +81,9 @@ public class CharacterCheck {
         for (int i = 0; i < list.size(); i++) {
             Set<Character> set = list.get(i).keySet();
             Object[] ch = set.toArray();
-            if(list.get(i).get(ch[0]) >= list.get(i).get(ch[1])) {
+            if (list.get(i).get(ch[0]) >= list.get(i).get(ch[1])) {
                 sb.append(ch[0]);
-            } else{
+            } else {
                 sb.append(ch[1]);
             }
         }

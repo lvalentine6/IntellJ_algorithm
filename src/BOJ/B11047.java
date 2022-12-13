@@ -26,7 +26,7 @@ public class B11047 {
         // 가장 큰 동전의 단위로 낼수 있는 만큼 내고 다음 동전 단위로 넘어가기
         int i = 0;
         while (k != 0) {
-            if(k - coin[i] >= 0) {
+            if (k - coin[i] >= 0) {
                 k = k - coin[i];
                 answer++;
             } else {

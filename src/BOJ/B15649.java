@@ -23,9 +23,10 @@ public class B15649 {
         System.out.println(sb);
 
     }
+
     public static void dfs(int n, int m, int depth) {
         // 재귀를 탈출하고 출력
-        if(depth == m) {
+        if (depth == m) {
             for (int i = 0; i < arr.length; i++) {
                 sb.append(arr[i]).append(" ");
             }
@@ -34,7 +35,7 @@ public class B15649 {
         }
         for (int i = 0; i < n; i++) {
             // i를 방문하지 않았다면
-            if(visit[i] == false) {
+            if (visit[i] == false) {
                 visit[i] = true;
                 arr[depth] = i + 1;
                 // depth를 증가시키고 재귀 호출

@@ -14,9 +14,9 @@ public class MinRectangle {
         List<Integer> htemp = new ArrayList<>();
 
         // 가로 길이의 최대값, 세로 길이의 최소값
-        for (int i=0; i< sizes.length; i++) {
-                int c1 = sizes[i][0];
-                int c2 = sizes[i][1];
+        for (int i = 0; i < sizes.length; i++) {
+            int c1 = sizes[i][0];
+            int c2 = sizes[i][1];
             ltemp.add(Math.max(c1, c2));
             htemp.add(Math.min(c1, c2));
         }

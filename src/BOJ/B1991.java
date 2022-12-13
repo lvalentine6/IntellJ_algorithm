@@ -43,7 +43,9 @@ public class B1991 {
 
     // 전위 순회 메서드
     static void preOrder(int s) {
-        if (s == -1) return;
+        if (s == -1) {
+            return;
+        }
         // 현재 노드 값 추가
         sb.append((char) (s + 'A'));
         // 왼쪽 자식 노드 호출
@@ -54,7 +56,9 @@ public class B1991 {
 
     // 중위 순회 메서드
     static void inOrder(int s) {
-        if (s == -1) return;
+        if (s == -1) {
+            return;
+        }
         // 왼쪽 자식 노드 호출
         inOrder(tree[s][0]);
         // 현재 노드 추가
@@ -65,7 +69,9 @@ public class B1991 {
 
     // 후위 순회 메서드
     static void postOrder(int s) {
-        if (s == -1) return;
+        if (s == -1) {
+            return;
+        }
         // 왼쪽 자식 노드 호출
         postOrder(tree[s][0]);
         // 오른쪽 자식 노드 호출

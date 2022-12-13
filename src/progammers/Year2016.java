@@ -24,28 +24,28 @@ public class Year2016 {
         cal.setTime(ndate);
         int dayNum = cal.get(Calendar.DAY_OF_WEEK);
 
-        switch(dayNum){
+        switch (dayNum) {
             case 1:
                 answer = "SUN";
-                break ;
+                break;
             case 2:
                 answer = "MON";
-                break ;
+                break;
             case 3:
                 answer = "TUE";
-                break ;
+                break;
             case 4:
                 answer = "WED";
-                break ;
+                break;
             case 5:
                 answer = "THU";
-                break ;
+                break;
             case 6:
                 answer = "FRI";
-                break ;
+                break;
             case 7:
                 answer = "SAT";
-                break ;
+                break;
 
         }
         System.out.println(answer);

@@ -32,7 +32,7 @@ public class B9934 {
         }
 
         // 탐색
-        search(0,arr.length - 1,0);
+        search(0, arr.length - 1, 0);
 
         // 출력을 위해 StringBuilder에 담기
         for (int i = 0; i < k; i++) {
@@ -44,9 +44,10 @@ public class B9934 {
 
         System.out.println(sb);
     }
+
     static void search(int start, int end, int depth) {
         // 재귀 탈출문
-        if(depth == k) {
+        if (depth == k) {
             return;
         }
 
