@@ -1,10 +1,13 @@
 package Codility;
 
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class Lesson2_1 {
     public int[] solution(int[] A, int K) {
-        if (A.length == 0) return A;
+        if (A.length == 0) {
+            return A;
+        }
 
         int[] answer = new int[A.length];
 

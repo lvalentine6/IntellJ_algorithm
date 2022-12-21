@@ -1,6 +1,11 @@
 package progammers.preTest1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 // 풀이시간 : 3시간
 public class Test1 {
     public static void main(String[] args) {
@@ -24,14 +29,18 @@ public class Test1 {
 
         set.retainAll(list2);
 
-        for(char c : set) {
+        for (char c : set) {
             int cntX = 0;
             int cntY = 0;
             for (int i = 0; i < list.size(); i++) {
-                if(c == list.get(i)) cntX++;
+                if (c == list.get(i)) {
+                    cntX++;
+                }
             }
             for (int i = 0; i < list2.size(); i++) {
-                if(c == list2.get(i)) cntY++;
+                if (c == list2.get(i)) {
+                    cntY++;
+                }
             }
             int min = Math.min(cntX, cntY);
 
@@ -40,19 +49,19 @@ public class Test1 {
             }
         }
 
-        if(listResult.isEmpty()) {
+        if (listResult.isEmpty()) {
             answer = "-1";
 //            return answer;
         }
 
         Collections.sort(listResult, Collections.reverseOrder());
 
-        if(listResult.get(0) == '0') {
+        if (listResult.get(0) == '0') {
             answer = "0";
 //            return answer;
         }
         StringBuilder sb = new StringBuilder();
-        for(char c : listResult) {
+        for (char c : listResult) {
             sb.append(c);
         }
         answer = sb.toString();

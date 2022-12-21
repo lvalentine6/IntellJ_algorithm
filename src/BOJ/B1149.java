@@ -33,13 +33,13 @@ public class B1149 {
         int result = price;
         result += arr[idx][preIdx];
 
-        if (idx == n-1) {
+        if (idx == n - 1) {
             answer = Math.min(answer, result);
             return;
         }
 
         for (int i = 0; i < 3; i++) {
-            if(preIdx != i) {
+            if (preIdx != i) {
                 cal(idx + 1, i, result);
             }
         }

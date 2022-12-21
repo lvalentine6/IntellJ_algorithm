@@ -48,7 +48,7 @@ public class B1260 {
         visit[v] = true;
         sb.append(v).append(" ");
         for (int i = 1; i < n + 1; i++) {
-            if(arr[v][i] == 1 && !visit[i]) {
+            if (arr[v][i] == 1 && !visit[i]) {
                 dfs(i);
             }
         }
@@ -63,7 +63,7 @@ public class B1260 {
             v = queue.poll();
             sb.append(v).append(" ");
             for (int i = 1; i < n + 1; i++) {
-                if(arr[v][i] == 1 && !visit[i]) {
+                if (arr[v][i] == 1 && !visit[i]) {
                     queue.add(i);
                     visit[i] = true;
                 }

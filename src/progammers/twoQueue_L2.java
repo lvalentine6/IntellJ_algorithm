@@ -1,6 +1,7 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class twoQueue_L2 {
     public static void main(String[] args) {
@@ -40,7 +41,7 @@ public class twoQueue_L2 {
 
         while (!(sumQ1 == target)) {
             // mid와 start의 범위가 list.size를 벗어나면 원소 합을 같게 만들수 없음
-            if(queue1Idx >= list.size() || queue2Idx >= list.size()) {
+            if (queue1Idx >= list.size() || queue2Idx >= list.size()) {
                 answer = -1;
                 break;
             }

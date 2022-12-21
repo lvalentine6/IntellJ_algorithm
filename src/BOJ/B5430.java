@@ -2,7 +2,9 @@ package BOJ;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.StringTokenizer;
 
 public class B5430 {
     public static void main(String[] args) throws Exception {
@@ -14,7 +16,8 @@ public class B5430 {
         StringBuilder sb = new StringBuilder();
 
         //입력값 배열 저장 ("error" 출력시 continue 하기위해 for문에 roof 별칭 부여)
-        roof : for (int i = 0; i < t; i++) {
+        roof:
+        for (int i = 0; i < t; i++) {
             Deque<Integer> deque = new LinkedList<>();
             String[] s = br.readLine().split("");
             int size = Integer.parseInt(br.readLine());

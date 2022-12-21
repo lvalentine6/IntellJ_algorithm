@@ -26,12 +26,12 @@ public class B2559 {
             sum += arr[i];
 
             // 처음으로 구해진 합을 최댓값을 설정
-            if(i == k - 1) {
+            if (i == k - 1) {
                 max = sum;
             }
 
             // 한칸씩 밀며 합 구하기
-            if(i >= k) {
+            if (i >= k) {
                 sum -= arr[i - k];
                 max = Math.max(max, sum);
             }

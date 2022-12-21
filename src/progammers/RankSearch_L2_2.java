@@ -1,7 +1,10 @@
 package progammers;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 
 // 점수를 기준으로 이진 탐색을 이용하자
 // 이진탐색을 이용하려면 정렬을 해야함
@@ -10,8 +13,12 @@ public class RankSearch_L2_2 {
     static HashMap<String, ArrayList<Integer>> hm;
 
     public static void main(String[] args) {
-        String[] info = {"java backend junior pizza 150", "python frontend senior chicken 210", "python frontend senior chicken 150", "cpp backend senior pizza 260", "java backend junior chicken 80", "python backend senior chicken 50"};
-        String[] query = {"java and backend and junior and pizza 100", "python and frontend and senior and chicken 200", "cpp and - and senior and pizza 250", "- and backend and senior and - 150", "- and - and - and chicken 100", "- and - and - and - 150"};
+        String[] info = {"java backend junior pizza 150", "python frontend senior chicken 210",
+                "python frontend senior chicken 150", "cpp backend senior pizza 260", "java backend junior chicken 80",
+                "python backend senior chicken 50"};
+        String[] query = {"java and backend and junior and pizza 100", "python and frontend and senior and chicken 200",
+                "cpp and - and senior and pizza 250", "- and backend and senior and - 150",
+                "- and - and - and chicken 100", "- and - and - and - 150"};
         int[] answer = new int[query.length];
 
         // 문자열과 점수를 담을 HashMap

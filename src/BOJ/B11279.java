@@ -15,10 +15,10 @@ public class B11279 {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n; i++) {
             int v = Integer.parseInt(br.readLine());
-            if(v != 0) {
+            if (v != 0) {
                 pq.offer(v);
             } else {
-                if(pq.size() == 0) {
+                if (pq.size() == 0) {
                     sb.append(0).append("\n");
                 } else {
                     sb.append(pq.peek()).append("\n");

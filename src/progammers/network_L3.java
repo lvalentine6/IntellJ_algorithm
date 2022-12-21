@@ -13,7 +13,7 @@ public class network_L3 {
         // n개의 컴퓨터에 대해 탐색
         for (int i = 0; i < n; i++) {
             // 방문하지 않은 컴퓨터라면 탐색
-            if(!visited[i]) {
+            if (!visited[i]) {
                 dfs(computers, visited, i);
                 answer++;
             }
@@ -29,7 +29,7 @@ public class network_L3 {
 
         for (int i = 0; i < visited.length; i++) {
             // 자기 자신이 아니고 방문한적이 없고 값이 1이라면 재귀 호출
-            if(idx != i && !visited[i] && computers[idx][i] == 1) {
+            if (idx != i && !visited[i] && computers[idx][i] == 1) {
                 dfs(computers, visited, i);
             }
         }

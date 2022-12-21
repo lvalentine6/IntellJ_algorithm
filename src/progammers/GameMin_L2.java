@@ -49,8 +49,8 @@ public class GameMin_L2 {
 
             }
         }
-        if(visited[n-1][m-1]) {
-            return maps[n-1][m-1];
+        if (visited[n - 1][m - 1]) {
+            return maps[n - 1][m - 1];
         } else {
             return -1;
         }

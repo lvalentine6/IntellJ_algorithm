@@ -18,7 +18,7 @@ public class NumberStringAnd {
         // 문자열을 판단하기 위한 변수
         String a = new String();
 
-        while(!list.isEmpty()) {
+        while (!list.isEmpty()) {
             for (int i = 0; i < list.size(); i++) {
                 // a에 한글자씩 더해서 문자열 만들기
                 a += list.get(0);
@@ -28,43 +28,53 @@ public class NumberStringAnd {
                     case "zero":
                     case "0":
                         sb += 0;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "one":
                     case "1":
                         sb += 1;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "two":
                     case "2":
                         sb += 2;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "three":
                     case "3":
                         sb += 3;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "four":
                     case "4":
                         sb += 4;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "five":
                     case "5":
                         sb += 5;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "six":
                     case "6":
                         sb += 6;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "seven":
                     case "7":
                         sb += 7;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "eight":
                     case "8":
                         sb += 8;
-                    a = ""; break;
+                        a = "";
+                        break;
                     case "nine":
                     case "9":
                         sb += 9;
-                    a = ""; break;
+                        a = "";
+                        break;
                 }
             }
         }

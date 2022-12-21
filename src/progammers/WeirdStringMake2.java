@@ -15,18 +15,18 @@ public class WeirdStringMake2 {
         String[] temp = s.split("");
 
         // cnt를 이용해서 대소문자 바꾸기
-        for (int i=0; i< temp.length; i++) {
-        if(temp[i].equals(" ")) {
-            cnt = 0;
-        } else if(cnt % 2 == 0){
-            temp[i] = temp[i].toUpperCase();
-            cnt++;
-        } else {
-            temp[i] = temp[i].toLowerCase();
-            cnt++;
+        for (int i = 0; i < temp.length; i++) {
+            if (temp[i].equals(" ")) {
+                cnt = 0;
+            } else if (cnt % 2 == 0) {
+                temp[i] = temp[i].toUpperCase();
+                cnt++;
+            } else {
+                temp[i] = temp[i].toLowerCase();
+                cnt++;
             }
-        // Stringbuilder로 문자열 만들기
-        sb.append(temp[i]);
+            // Stringbuilder로 문자열 만들기
+            sb.append(temp[i]);
         }
 
         answer = sb.toString();

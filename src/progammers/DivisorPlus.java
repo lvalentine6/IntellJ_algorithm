@@ -21,7 +21,7 @@ public class DivisorPlus {
             // 약수의 개수 측정 변수
             int dnum = 0;
             for (int j = 1; j <= num.get(i); j++) {
-                if(num.get(i) % j == 0) {
+                if (num.get(i) % j == 0) {
                     dnum++;
                 }
             }

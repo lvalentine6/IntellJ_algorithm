@@ -19,7 +19,7 @@ public class PrimeNumber_L2 {
         while (ite.hasNext()) {
             int number = ite.next();
             // 소수이면 cnt 증가
-            if(primeNumber(number)) {
+            if (primeNumber(number)) {
                 cnt++;
             }
         }
@@ -27,9 +27,9 @@ public class PrimeNumber_L2 {
     }
 
     // 재귀를 이용한 조합 메소드
-    public void rec (String temp, String n) {
+    public void rec(String temp, String n) {
         // 현재 조합을 set에 추가
-        if(!temp.equals("")) {
+        if (!temp.equals("")) {
             hs.add(Integer.parseInt(temp));
         }
 
@@ -42,9 +42,11 @@ public class PrimeNumber_L2 {
 
     // 소수 판별 메소드
     static boolean primeNumber(int n) {
-        if(n == 0 || n == 1) return false;
+        if (n == 0 || n == 1) {
+            return false;
+        }
         for (int i = 2; i < n; i++) {
-            if(n % i == 0) {
+            if (n % i == 0) {
                 return false;
             }
         }

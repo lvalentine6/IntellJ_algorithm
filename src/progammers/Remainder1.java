@@ -11,10 +11,10 @@ public class Remainder1 {
         TreeSet<Integer> ts = new TreeSet<>();
         int x = 1;
 
-        for (int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             if (n % x != 1) {
                 x++;
-            }else {
+            } else {
                 ts.add(x);
                 x++;
             }

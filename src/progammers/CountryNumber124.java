@@ -9,10 +9,10 @@ public class CountryNumber124 {
         StringBuilder sb = new StringBuilder();
 
         // 핵심은 3진법과 같지만 0에 대한 처리가 다름
-        while(n > 0) {
+        while (n > 0) {
             int remain = n % 3;
             n /= 3;
-            if(remain == 0) {
+            if (remain == 0) {
                 remain = 4;
                 n--;
             }

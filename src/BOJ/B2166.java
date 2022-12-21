@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 public class B2166 {
     static int n;
     static long[] x, y;
-    static double resultX, resultY ,resultSum;
+    static double resultX, resultY, resultSum;
 
 
     public static void main(String[] args) throws Exception {
@@ -26,7 +26,7 @@ public class B2166 {
         y[n] = y[0];
 
         area(x, y);
-        System.out.println(String.format("%.1f",resultSum));
+        System.out.println(String.format("%.1f", resultSum));
 
     }
 

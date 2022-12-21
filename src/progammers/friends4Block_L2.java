@@ -1,6 +1,7 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class friends4Block_L2 {
     static int[] dx = {0, 1, 1};
@@ -87,7 +88,7 @@ public class friends4Block_L2 {
             }
         }
         // 만약 제거해야할 블록이 없다면 flag 상태 변경
-        if(list.isEmpty()) {
+        if (list.isEmpty()) {
             flag = true;
         }
 

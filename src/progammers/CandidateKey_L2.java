@@ -9,11 +9,14 @@ import java.util.List;
 
 public class CandidateKey_L2 {
     static int answer;
-    static int n,m;
+    static int n, m;
     static List<HashSet<Integer>> candidateKey;
     static String[][] relationCopy;
+
     public static void main(String[] args) {
-        relationCopy = new String[][] {{"100", "ryan", "music", "2"}, {"200", "apeach", "math", "2"}, {"300", "tube", "computer", "3"}, {"400", "con", "computer", "4"}, {"500", "muzi", "music", "3"}, {"600", "apeach", "music", "2"}};
+        relationCopy = new String[][]{{"100", "ryan", "music", "2"}, {"200", "apeach", "math", "2"},
+                {"300", "tube", "computer", "3"}, {"400", "con", "computer", "4"}, {"500", "muzi", "music", "3"},
+                {"600", "apeach", "music", "2"}};
         answer = 0;
 
         // 중복 조합을 고려하여 HashSet 사용
@@ -33,14 +36,14 @@ public class CandidateKey_L2 {
     // 조합 생성 메서드
     static void combination(int idx, int size, int depth, HashSet<Integer> set) {
         // 조합이 만들어지면
-        if(depth == size) {
+        if (depth == size) {
             // 유일성 검사
-            if(!unique(set)) {
+            if (!unique(set)) {
                 return;
             }
             // 최소성 검사
             for (HashSet<Integer> key : candidateKey) {
-                if(set.containsAll(key)) {
+                if (set.containsAll(key)) {
                     return;
                 }
             }
@@ -67,7 +70,7 @@ public class CandidateKey_L2 {
             for (int idx : set) {
                 sb.append(relationCopy[i][idx]);
             }
-            if(!list.contains(sb.toString())) {
+            if (!list.contains(sb.toString())) {
                 list.add(sb.toString());
             } else {
                 return false;

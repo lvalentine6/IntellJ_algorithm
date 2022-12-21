@@ -3,7 +3,6 @@ package progammers;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Stack;
 
 public class TowerOfHanoi_L2 {
     static List<int[]> list;

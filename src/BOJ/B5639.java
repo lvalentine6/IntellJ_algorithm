@@ -24,7 +24,9 @@ public class B5639 {
 
     // 후위 순회 메서드
     static void preOrder(Node node) {
-        if (node == null) return;
+        if (node == null) {
+            return;
+        }
         preOrder(node.left);
         preOrder(node.right);
         System.out.println(node.num);

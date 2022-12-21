@@ -25,7 +25,7 @@ public class B15650 {
     }
 
     public static void dfs(int idx, int depth) {
-        if(depth == m) {
+        if (depth == m) {
             for (int v : arr) {
                 sb.append(v).append(" ");
             }

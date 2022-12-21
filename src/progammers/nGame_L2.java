@@ -21,15 +21,15 @@ public class nGame_L2 {
             // 배열을 돌면서 순서에 맞게 StringBuilder에 추가
             for (int i = 0; i < temp.length; i++) {
                 // 순서가 맴버수보다 커지면 1번으로 초기화
-                if(order > m) {
+                if (order > m) {
                     order = 1;
                 }
                 // 순서에 맞는 번호라면 StringBuilder에 추가
-                if(order == p) {
+                if (order == p) {
                     sb.append(temp[i]);
                 }
                 // StringBuilder의 크기가 t와 같다면 즉시 탐색종료
-                if(sb.length() == t) {
+                if (sb.length() == t) {
                     break;
                 }
                 // 순서 증가

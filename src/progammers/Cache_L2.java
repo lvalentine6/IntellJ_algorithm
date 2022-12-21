@@ -15,17 +15,17 @@ public class Cache_L2 {
         LinkedList<String> list = new LinkedList<>();
         for (int i = 0; i < cities.length; i++) {
             // 캐시의 사이즈가 0일수도 있다는것을 고려
-            if(list.size() > cacheSize) {
+            if (list.size() > cacheSize) {
                 list.removeLast();
             }
             // Hit인경우
-            if(list.contains(cities[i])) {
+            if (list.contains(cities[i])) {
                 // list에 값이 있다면 삭제하고 제일 앞으로 추가
                 list.remove(list.indexOf(cities[i]));
                 answer++;
-            // Miss인경우
+                // Miss인경우
             } else {
-                answer+=5;
+                answer += 5;
             }
             list.addFirst(cities[i]);
         }

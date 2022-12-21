@@ -8,7 +8,7 @@ public class Tiredness {
     public static void main(String[] args) {
         Tiredness t = new Tiredness();
         int k = 80;
-        int[][] dungeons = 	{{80,20},{50,40},{30,10}};
+        int[][] dungeons = {{80, 20}, {50, 40}, {30, 10}};
         System.out.println(t.solution(k, dungeons));
     }
 
@@ -24,10 +24,10 @@ public class Tiredness {
     public static void DFS(int k, int[][] dungeons, int cnt) {
         for (int i = 0; i < dungeons.length; i++) {
             // visit[i]를 방문하지 않았고 피로도 조건이 맞으면
-            if(!visit[i] && dungeons[i][0] <= k) {
+            if (!visit[i] && dungeons[i][0] <= k) {
                 visit[i] = true;
                 // 소모 피로도를 설정하고 재귀
-                DFS(k - dungeons[i][1], dungeons, cnt+1);
+                DFS(k - dungeons[i][1], dungeons, cnt + 1);
                 visit[i] = false;
             }
         }

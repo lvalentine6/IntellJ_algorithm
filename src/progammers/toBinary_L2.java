@@ -13,7 +13,7 @@ public class toBinary_L2 {
             // 임시 String
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < s.length(); i++) {
-                if(s.charAt(i) == '1') {
+                if (s.charAt(i) == '1') {
                     sb.append("1");
                 } else {
                     sum++;

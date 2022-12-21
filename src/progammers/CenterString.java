@@ -15,7 +15,7 @@ public class CenterString {
         // 중간값 구하기 (배열순서 보정)
 
         // 단어 길이가 짝수일때
-        if(s.length() % 2 == 0) {
+        if (s.length() % 2 == 0) {
             int tempint = s.length() / 2 - 1;
             int tempint2 = s.length() / 2;
             answer = temp[tempint] + temp[tempint2];
@@ -24,7 +24,7 @@ public class CenterString {
         // 단어 길이가 홀수일때
         else {
             double tempdouble = Math.ceil((double) s.length() / 2) - 1;
-            answer = temp[(int)tempdouble];
+            answer = temp[(int) tempdouble];
         }
 
         System.out.println(answer);

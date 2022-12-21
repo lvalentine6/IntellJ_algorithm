@@ -25,7 +25,7 @@ public class B1149_2 {
             arr[i][2] += Math.min(arr[i - 1][0], arr[i - 1][1]);
         }
 
-        System.out.println(Math.min(Math.min(arr[n-1][0], arr[n-1][1]), arr[n-1][2]));
+        System.out.println(Math.min(Math.min(arr[n - 1][0], arr[n - 1][1]), arr[n - 1][2]));
 
     }
 }

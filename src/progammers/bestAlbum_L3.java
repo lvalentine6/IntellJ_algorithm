@@ -1,10 +1,14 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 
 public class bestAlbum_L3 {
     public static void main(String[] args) {
-        String[] genres = {"classic", "pop", "classic", "classic", "pop" };
+        String[] genres = {"classic", "pop", "classic", "classic", "pop"};
         int[] plays = {500, 600, 150, 800, 2500};
         List<Integer> result = new ArrayList<>();
 

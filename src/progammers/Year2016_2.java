@@ -10,7 +10,7 @@ public class Year2016_2 {
         String answer = "";
 
         LocalDate date = LocalDate.of(2016, a, b);
-        answer = date.getDayOfWeek().toString().substring(0,3);
+        answer = date.getDayOfWeek().toString().substring(0, 3);
 
         System.out.println(answer);
 

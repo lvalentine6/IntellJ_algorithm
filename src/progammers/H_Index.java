@@ -15,10 +15,10 @@ public class H_Index {
             int up = 0;
             int down = 0;
             for (int j = 0; j < citations.length; j++) {
-                if(citations[j] >= h) {
+                if (citations[j] >= h) {
                     up++;
                 }
-                if(citations[j] <= h) {
+                if (citations[j] <= h) {
                     down++;
                 }
             }

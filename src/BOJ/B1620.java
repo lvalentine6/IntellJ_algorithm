@@ -24,7 +24,7 @@ public class B1620 {
         for (int i = 0; i < m; i++) {
             String temp = br.readLine();
             // 숫자인지 판별
-            if (temp.chars().allMatch(Character :: isDigit)) {
+            if (temp.chars().allMatch(Character::isDigit)) {
                 sb.append(hm1.get(Integer.parseInt(temp))).append("\n");
             } else {
                 sb.append(hm2.get(temp)).append("\n");

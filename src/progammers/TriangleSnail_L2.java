@@ -1,6 +1,8 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class TriangleSnail_L2 {
     public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class TriangleSnail_L2 {
         }
 
         // 탐색 메서드 호출
-        search(arr, visited, targetNum,0, 0, 1, n);
+        search(arr, visited, targetNum, 0, 0, 1, n);
 
         int[] answer = new int[targetNum];
         List<Integer> list = new ArrayList<>();
@@ -46,16 +48,16 @@ public class TriangleSnail_L2 {
 
         while (sum <= target) {
             // 방문하지 않았다면
-            if(!visited[x][y]) {
+            if (!visited[x][y]) {
                 visited[x][y] = true;
                 arr[x][y] = sum;
                 sum++;
             }
 
             // flag == 0 이면 x값 증가
-            if(flag == 0) {
+            if (flag == 0) {
                 // 배열의 범위를 벗어나지 않으면서 방문하지 않았다면
-                if((x < n- 1) && (!visited[x + 1][y])) {
+                if ((x < n - 1) && (!visited[x + 1][y])) {
                     x++;
                 } else {
                     flag = 1;
@@ -63,7 +65,7 @@ public class TriangleSnail_L2 {
                 // flag == 1 이면 y값 증가
             } else if (flag == 1) {
                 // 배열의 범위를 벗어나지 않으면서 방문하지 않았다면
-                if((y < n - 1) && (!visited[x][y + 1])) {
+                if ((y < n - 1) && (!visited[x][y + 1])) {
                     y++;
                 } else {
                     flag = 2;
@@ -71,7 +73,7 @@ public class TriangleSnail_L2 {
                 // flag == 2 이면 x, y값 감소
             } else {
                 // 방문하지 않았다면
-                if(!visited[x - 1][y - 1]) {
+                if (!visited[x - 1][y - 1]) {
                     x--;
                     y--;
                 } else {

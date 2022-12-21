@@ -39,7 +39,7 @@ public class B2606 {
         visit[i] = true;
         for (int j = 1; j < n + 1; j++) {
             // 연결된 노드를 발견하고 방문한적이 없다면
-            if(arr[i][j] == 1 && !visit[j]) {
+            if(arr[i][j] == 1 && visit[j] == false) {
                 // answer를 증가시키고 재귀를 통해 depth 증가
                 answer++;
                 dfs(j);

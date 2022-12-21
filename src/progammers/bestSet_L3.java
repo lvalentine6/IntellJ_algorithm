@@ -14,7 +14,7 @@ public class bestSet_L3 {
         for (int i = 0; i < n; i++) {
             int temp = s / cnt;
             // 0이 하나라도 있으면 모든 원소의 곱은 0
-            if(temp == 0) {
+            if (temp == 0) {
                 answer = new int[]{-1};
                 // return answer;
             }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class NoNumberPlus {
     public static void main(String[] args) {
-        int[] numbers = {1,2,3,4,6,7,8,0};
+        int[] numbers = {1, 2, 3, 4, 6, 7, 8, 0};
         int answer = 0;
 
         List<Integer> list = new ArrayList<>();
@@ -18,7 +18,7 @@ public class NoNumberPlus {
 
         for (int i = 0; i < list.size(); i++) {
             for (int j = 0; j < numbers.length; j++) {
-                if(list.get(i) == numbers[j]) {
+                if (list.get(i) == numbers[j]) {
                     list.remove(list.get(i));
                 }
             }

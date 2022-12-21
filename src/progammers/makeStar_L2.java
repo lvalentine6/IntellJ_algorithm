@@ -1,6 +1,8 @@
 package progammers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class makeStar_L2 {
     static List<int[]> list;
@@ -12,8 +14,8 @@ public class makeStar_L2 {
 //        int[][] line = {{1, -1, 0}, {-2, -1, 0}, {4, -1, 0}};
 
         list = new ArrayList<>();
-        xMinMax = new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE};
-        yMinMax = new int[] {Integer.MAX_VALUE, Integer.MIN_VALUE};
+        xMinMax = new int[]{Integer.MAX_VALUE, Integer.MIN_VALUE};
+        yMinMax = new int[]{Integer.MAX_VALUE, Integer.MIN_VALUE};
 
         // line 배열을 순회하며 교점 구하기
         for (int i = 0; i < line.length; i++) {
@@ -35,14 +37,14 @@ public class makeStar_L2 {
                 for (int k = 0; k < list.size(); k++) {
                     int x = list.get(k)[0];
                     int y = list.get(k)[1];
-                    if(i == y && j == x) {
+                    if (i == y && j == x) {
                         sb.append("*");
                         flag = true;
                         break;
                     }
                 }
                 // 교점이 아니면 . 찍기
-                if(!flag) {
+                if (!flag) {
                     sb.append(".");
                 }
             }
@@ -61,7 +63,7 @@ public class makeStar_L2 {
     // 교점을 구하는 메서드
     static void makePoint(long a, long b, long e, long c, long d, long f) {
         // 분모가 0이면
-        if((a * d - b * c) == 0) {
+        if ((a * d - b * c) == 0) {
             return;
         }
 
@@ -69,14 +71,14 @@ public class makeStar_L2 {
         long y = (e * c - a * f) / (a * d - b * c);
 
         // 좌표가 정수라면
-        if((b * f - e * d) % (a * d - b * c) == 0 && (e * c - a * f) % (a * d - b * c) == 0) {
-            list.add(new int[] {(int)x, (int) y});
+        if ((b * f - e * d) % (a * d - b * c) == 0 && (e * c - a * f) % (a * d - b * c) == 0) {
+            list.add(new int[]{(int) x, (int) y});
 
             // x,y 좌표의 최댓, 최솟값 저장
-            xMinMax[0] = Math.min(xMinMax[0], (int)x);
-            xMinMax[1] = Math.max(xMinMax[1], (int)x);
-            yMinMax[0] = Math.min(yMinMax[0], (int)y);
-            yMinMax[1] = Math.max(yMinMax[1], (int)y);
+            xMinMax[0] = Math.min(xMinMax[0], (int) x);
+            xMinMax[1] = Math.max(xMinMax[1], (int) x);
+            yMinMax[0] = Math.min(yMinMax[0], (int) y);
+            yMinMax[1] = Math.max(yMinMax[1], (int) y);
         }
     }
 }

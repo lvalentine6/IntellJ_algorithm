@@ -15,7 +15,7 @@ public class Boat_L2 {
         // 최소로 구명보드를 사용하려면 가장 무거운 사람과 가장 가벼운 사람
         for (int i = people.length - 1; i >= idx; i--) {
             // 무거운 사람 + 가벼운 사람이 리미트 보다 크면
-            if(people[i] + people[idx] > limit) {
+            if (people[i] + people[idx] > limit) {
                 answer++;
             }
             // 같거나 작은 경우

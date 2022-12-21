@@ -48,7 +48,7 @@ public class B2579 {
 
     public static int topDown(int num) {
         // 아직 탐색하지 않은 dp일경우 재귀호출
-        if(dp[num] == null) {
+        if (dp[num] == null) {
             dp[num] = Math.max(topDown(num - 3) + score[num - 1], topDown(num - 2)) + score[num];
         }
         return dp[num];

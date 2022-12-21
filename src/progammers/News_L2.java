@@ -28,26 +28,26 @@ public class News_L2 {
         ArrayList<String> h = new ArrayList<>();
 
         // str1 문자열 두 문자씩 끊고 공백과 특수문자가 들어간 문자열 버리기
-        for (int i = 0; i < str1.length()-1; i++) {
+        for (int i = 0; i < str1.length() - 1; i++) {
             char ch1 = str1.charAt(i);
-            char ch2 = str1.charAt(i+1);
-            if((ch1 >= 'a' && ch1 <= 'z') && (ch2 >= 'a' && ch2 <= 'z')) {
+            char ch2 = str1.charAt(i + 1);
+            if ((ch1 >= 'a' && ch1 <= 'z') && (ch2 >= 'a' && ch2 <= 'z')) {
                 list1.add(String.valueOf(ch1) + String.valueOf(ch2));
             }
         }
 
         // str2 문자열 두 문자씩 끊고 공백과 특수문자가 들어간 문자열 버리기
-        for (int i = 0; i < str2.length()-1; i++) {
+        for (int i = 0; i < str2.length() - 1; i++) {
             char ch1 = str2.charAt(i);
-            char ch2 = str2.charAt(i+1);
-            if((ch1 >= 'a' && ch1 <= 'z') && (ch2 >= 'a' && ch2 <= 'z')) {
+            char ch2 = str2.charAt(i + 1);
+            if ((ch1 >= 'a' && ch1 <= 'z') && (ch2 >= 'a' && ch2 <= 'z')) {
                 list2.add(String.valueOf(ch1) + String.valueOf(ch2));
             }
         }
 
         // 교집합과 합집합
-        for(String s : list1) {
-            if(list2.remove(s)) {
+        for (String s : list1) {
+            if (list2.remove(s)) {
                 g.add(s);
             }
             h.add(s);
@@ -56,13 +56,13 @@ public class News_L2 {
         h.addAll(list2);
 
         // 자카드 유사도 구하기
-        double temp = (double)g.size() / (double)h.size();
+        double temp = (double) g.size() / (double) h.size();
         temp = temp * 65536;
         // 합집합이 공집합이면 자카드 유사도가 1이므로
-        if(h.size()==0) {
+        if (h.size() == 0) {
             System.out.println(65536);
         }
-        answer = (int)temp;
+        answer = (int) temp;
 
         System.out.println(answer);
     }
