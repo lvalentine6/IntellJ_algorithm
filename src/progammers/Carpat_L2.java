@@ -15,6 +15,7 @@ public class Carpat_L2 {
             int row = i;
             // 가로 길이
             int col = total / row;
+            
 
             // 가로 길이가 세로 길이와 같거나 세로보다 길기 떄문에
             if(row > col) {
