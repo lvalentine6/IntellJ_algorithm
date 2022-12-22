@@ -42,7 +42,7 @@ public class B2606_2 {
             int temp = queue.poll();
             for (int j = 1; j < n + 1; j++) {
                 // 노드가 연결되어 있고 방문하지 않았다면
-                if (arr[temp][j] == 1 && visit[j] == false) {
+                if (arr[temp][j] == 1 && !visit[j]) {
                     // 방문처리하고 큐에 넣기
                     visit[j] = true;
                     queue.offer(j);

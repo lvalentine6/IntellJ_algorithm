@@ -8,6 +8,8 @@ public class Year2016 {
     public static void main(String[] args) throws ParseException {
         int a = 5;
         int b = 24;
+        String k = "0523";
+        System.out.println(Integer.parseInt(k));
         String answer = "";
         StringBuilder sb = new StringBuilder();
         sb.append(2016);
