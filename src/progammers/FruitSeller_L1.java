@@ -1,7 +1,7 @@
 package progammers;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class FruitSeller_L1 {
@@ -17,17 +17,19 @@ public class FruitSeller_L1 {
             list.add(i);
         }
 
-        list.sort(Collections.reverseOrder());
-        int repeat = list.size() / m;
+//        list.sort(Collections.reverseOrder());
+        list.sort(Comparator.reverseOrder());
 
-        int first = 0;
-        int last = m;
+        int repeat = list.size() / m;
+        int firstIndex = 0;
+        int lastIndex = m;
 
         for (int i = 0; i < repeat; i++) {
-            List<Integer> subList = list.subList(first, last);
-            first = last;
-            last += m;
-            answer += Collections.min(subList) * m;
+            List<Integer> subList = list.subList(firstIndex, lastIndex);
+            firstIndex = lastIndex;
+            lastIndex += m;
+//            answer += Collections.min(subList) * m;
+            answer += subList.get(lastIndex - firstIndex - 1) * m;
         }
 
         System.out.println(answer);
