@@ -81,9 +81,9 @@ public class B1063 {
 
         int[] temp = moveMap.get(input);
 
-        if((kingXy[0] + temp[0] >= 0 && kingXy[0] + temp[0] <= 7) && (kingXy[1] + temp[1] >= 0 && kingXy[1] + temp[1] <= 7)) {
-            if(kingXy[0] + temp[0] == stoneXy[0] && kingXy[1] + temp[1] == stoneXy[1]) {
-                if((stoneXy[0] + temp[0] >= 0 && stoneXy[0] + temp[0] <= 7) && (stoneXy[1] + temp[1] >= 0 && stoneXy[1] + temp[1] <= 7)) {
+        if ((kingXy[0] + temp[0] >= 0 && kingXy[0] + temp[0] <= 7) && (kingXy[1] + temp[1] >= 0 && kingXy[1] + temp[1] <= 7)) {
+            if (kingXy[0] + temp[0] == stoneXy[0] && kingXy[1] + temp[1] == stoneXy[1]) {
+                if ((stoneXy[0] + temp[0] >= 0 && stoneXy[0] + temp[0] <= 7) && (stoneXy[1] + temp[1] >= 0 && stoneXy[1] + temp[1] <= 7)) {
                     kingXy[0] = kingXy[0] + temp[0];
                     kingXy[1] = kingXy[1] + temp[1];
                     stoneXy[0] = stoneXy[0] + temp[0];

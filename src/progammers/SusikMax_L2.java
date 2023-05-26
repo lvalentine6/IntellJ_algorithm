@@ -1,10 +1,10 @@
 package progammers;
 
+import javax.script.ScriptException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
-import javax.script.ScriptException;
 
 public class SusikMax_L2 {
     public static void main(String[] args) throws ScriptException {

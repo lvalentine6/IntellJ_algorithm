@@ -1,10 +1,6 @@
 package progammers.preTest1;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 // 풀이시간 : 3시간
 public class Test1 {

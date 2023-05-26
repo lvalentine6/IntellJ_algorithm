@@ -5,6 +5,18 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class ReportResult {
+    public static void main(String[] args) {
+        ReportResult rr = new ReportResult();
+        String[] id_list = {"muzi", "frodo", "apeach", "neo"};
+        String[] report = {"muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"};
+        int k = 2;
+
+//        String[] id_list = {"con", "ryan"};
+//        String[] report = {"ryan con", "ryan con", "ryan con", "ryan con"};
+//        int k = 3;
+        System.out.println(rr.solution(id_list, report, k));
+    }
+
     public int[] solution(String[] id_list, String[] report, int k) {
         int[] answer = new int[id_list.length];
 
@@ -49,17 +61,5 @@ public class ReportResult {
             answer[i] = cntMap.getOrDefault(id_list[i], 0);
         }
         return answer;
-    }
-
-    public static void main(String[] args) {
-        ReportResult rr = new ReportResult();
-        String[] id_list = {"muzi", "frodo", "apeach", "neo"};
-        String[] report = {"muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"};
-        int k = 2;
-
-//        String[] id_list = {"con", "ryan"};
-//        String[] report = {"ryan con", "ryan con", "ryan con", "ryan con"};
-//        int k = 3;
-        System.out.println(rr.solution(id_list, report, k));
     }
 }

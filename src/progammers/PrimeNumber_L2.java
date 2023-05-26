@@ -8,6 +8,25 @@ public class PrimeNumber_L2 {
     // 전역변수로 HashSet 선언
     HashSet<Integer> hs = new HashSet<>();
 
+    // 소수 판별 메소드
+    static boolean primeNumber(int n) {
+        if (n == 0 || n == 1) {
+            return false;
+        }
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // 테스트
+    public static void main(String[] args) {
+        PrimeNumber_L2 pn = new PrimeNumber_L2();
+        System.out.println(pn.solution("17"));
+    }
+
     public int solution(String numbers) {
         // 재귀를 이용해서 모든 조합 만들기
         rec("", numbers);
@@ -38,24 +57,5 @@ public class PrimeNumber_L2 {
             // 재귀 호출
             rec(temp + n.charAt(i), n.substring(0, i) + n.substring(i + 1));
         }
-    }
-
-    // 소수 판별 메소드
-    static boolean primeNumber(int n) {
-        if (n == 0 || n == 1) {
-            return false;
-        }
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    // 테스트
-    public static void main(String[] args) {
-        PrimeNumber_L2 pn = new PrimeNumber_L2();
-        System.out.println(pn.solution("17"));
     }
 }

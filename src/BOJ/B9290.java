@@ -29,7 +29,7 @@ public class B9290 {
             search(arr, visited, flag);
             sb.append("Case ").append(i).append(":").append("\n");
             for (int j = 0; j < 3; j++) {
-                if(i == cnt && j == 2) {
+                if (i == cnt && j == 2) {
                     sb.append(arr[j][0]).append(arr[j][1]).append(arr[j][2]);
                 } else {
                     sb.append(arr[j][0]).append(arr[j][1]).append(arr[j][2]).append("\n");
@@ -65,7 +65,7 @@ public class B9290 {
             return true;
         } else if (flag.equals(arr[0][0]) && flag.equals(arr[1][0]) && flag.equals(arr[2][0])) {
             return true;
-        } else if(flag.equals(arr[0][0]) && flag.equals(arr[1][1]) && flag.equals(arr[2][2])) {
+        } else if (flag.equals(arr[0][0]) && flag.equals(arr[1][1]) && flag.equals(arr[2][2])) {
             return true;
         } else if (flag.equals(arr[0][1]) && flag.equals(arr[1][1]) && flag.equals(arr[2][1])) {
             return true;
@@ -73,7 +73,7 @@ public class B9290 {
             return true;
         } else if (flag.equals(arr[1][0]) && flag.equals(arr[1][1]) && flag.equals(arr[1][2])) {
             return true;
-        } else if(flag.equals(arr[2][0]) && flag.equals(arr[2][1]) && flag.equals(arr[2][2])) {
+        } else if (flag.equals(arr[2][0]) && flag.equals(arr[2][1]) && flag.equals(arr[2][2])) {
             return true;
         }
         return false;

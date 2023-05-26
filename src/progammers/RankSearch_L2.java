@@ -61,26 +61,6 @@ public class RankSearch_L2 {
 }
 
 class Volunteer {
-    public String getLanguage() {
-        return language;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getFavorite() {
-        return favorite;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
     String language;
     String position;
     String type;
@@ -94,9 +74,7 @@ class Volunteer {
         this.favorite = f;
         this.score = s;
     }
-}
 
-class Query {
     public String getLanguage() {
         return language;
     }
@@ -116,7 +94,9 @@ class Query {
     public int getScore() {
         return score;
     }
+}
 
+class Query {
     String language;
     String position;
     String type;
@@ -129,5 +109,25 @@ class Query {
         this.type = t;
         this.favorite = f;
         this.score = s;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getFavorite() {
+        return favorite;
+    }
+
+    public int getScore() {
+        return score;
     }
 }

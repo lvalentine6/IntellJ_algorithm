@@ -28,7 +28,7 @@ public class KeyPad_LH {
             }
 
             // number[i] == 0 인 경우 10으로 바꾸기
-            if(numbers[i] == 0) {
+            if (numbers[i] == 0) {
                 numbers[i] = zero;
             }
 

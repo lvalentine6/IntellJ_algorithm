@@ -1,6 +1,6 @@
 package progammers;
 
-import java.util.*;
+import java.util.Arrays;
 
 public class NumberCardDivide_L2 {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class NumberCardDivide_L2 {
         while (divideNumberA < min) {
             boolean flag2 = false;
             for (int i = 0; i < arrayA.length; i++) {
-                if(arrayA[i] % divideNumberA != 0) {
+                if (arrayA[i] % divideNumberA != 0) {
                     flag2 = true;
                     break;
                 }
