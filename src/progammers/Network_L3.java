@@ -1,6 +1,6 @@
 package progammers;
 
-public class network_L3 {
+public class Network_L3 {
 
     public static void main(String[] args) {
         int n = 3;

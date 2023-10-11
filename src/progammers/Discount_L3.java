@@ -3,7 +3,7 @@ package progammers;
 import java.util.HashMap;
 import java.util.Map;
 
-public class discount_L3 {
+public class Discount_L3 {
     public static void main(String[] args) {
         int answer = 0;
         String[] want = {"banana", "apple", "rice", "pork", "pot"};

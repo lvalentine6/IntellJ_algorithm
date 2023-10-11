@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class wordConvert_L3 {
+public class WordConvert_L3 {
     static List<Integer> list;
 
     public static void main(String[] args) {

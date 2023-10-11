@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class kPrimeNumber_L2_fail {
+public class KPrimeNumber_L2_fail {
     static String[] arr;
     static List<String> list;
     static int answer;

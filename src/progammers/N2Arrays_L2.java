@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class n2Arrays_L2 {
+public class N2Arrays_L2 {
     public static void main(String[] args) {
         int n = 4;
         long left = 7;

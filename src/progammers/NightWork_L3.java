@@ -3,7 +3,7 @@ package progammers;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class nightWork_L3 {
+public class NightWork_L3 {
     public static void main(String[] args) {
         int n = 4;
         int[] works = {4, 3, 3};

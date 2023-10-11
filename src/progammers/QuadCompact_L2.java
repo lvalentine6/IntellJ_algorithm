@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Arrays;
 
-public class quadCompact_L2 {
+public class QuadCompact_L2 {
     static int[] answer;
 
     public static void main(String[] args) {

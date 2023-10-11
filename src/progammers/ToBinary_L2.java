@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Arrays;
 
-public class toBinary_L2 {
+public class ToBinary_L2 {
     public static void main(String[] args) {
         String s = "110010101001";
         int[] answer = new int[2];

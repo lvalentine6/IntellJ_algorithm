@@ -3,7 +3,7 @@ package progammers;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class line_L2 {
+public class Line_L2 {
     static ArrayList<int[]> list;
 
     public static void main(String[] args) {

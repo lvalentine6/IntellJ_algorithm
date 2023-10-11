@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.*;
 
-public class englishWordChain_L2 {
+public class EnglishWordChain_L2 {
     static List<String> list;
 
     public static void main(String[] args) {

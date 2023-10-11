@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Arrays;
 
-public class archeryCompetition_L2 {
+public class ArcheryCompetition_L2 {
     static int max;
     static int[] answer;
 

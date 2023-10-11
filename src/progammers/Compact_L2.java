@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.*;
 
-public class compact_L2 {
+public class Compact_L2 {
     public static void main(String[] args) {
 //        String msg = "KAKAO";
         String msg = "TOBEORNOTTOBEORTOBEORNOT";

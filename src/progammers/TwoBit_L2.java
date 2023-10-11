@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Arrays;
 
-public class twoBit_L2 {
+public class TwoBit_L2 {
     public static void main(String[] args) {
         long[] numbers = {2, 7, 13, 71};
         long[] answer = new long[numbers.length];

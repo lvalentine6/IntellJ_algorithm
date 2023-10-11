@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.*;
 
-public class parkingFee_L2 {
+public class ParkingFee_L2 {
     static Map<String, Integer> parseMap;
 
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package progammers;
 
 import java.util.Arrays;
 
-public class bestSet_L3 {
+public class BestSet_L3 {
     public static void main(String[] args) {
         int n = 2;
         int s = 1;

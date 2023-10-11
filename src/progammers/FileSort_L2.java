@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class fileSort_L2 {
+public class FileSort_L2 {
     public static void main(String[] args) {
         String[] files = {"img12", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"};
 //        String[] files = {"F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"};

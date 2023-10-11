@@ -3,7 +3,7 @@ package progammers;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class alonePlay_L2 {
+public class AlonePlay_L2 {
     static PriorityQueue<Integer> queue;
 
     public static void main(String[] args) {

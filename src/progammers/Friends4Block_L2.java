@@ -3,7 +3,7 @@ package progammers;
 import java.util.ArrayList;
 import java.util.List;
 
-public class friends4Block_L2 {
+public class Friends4Block_L2 {
     static int[] dx = {0, 1, 1};
     static int[] dy = {1, 0, 1};
     static List<int[]> list;

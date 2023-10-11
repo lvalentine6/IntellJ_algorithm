@@ -3,7 +3,7 @@ package progammers;
 import java.util.ArrayList;
 import java.util.List;
 
-public class twoQueue_L2 {
+public class TwoQueue_L2 {
     public static void main(String[] args) {
 //        int[] queue1 = {3, 2, 7, 2};
 //        int[] queue2 = {4, 6, 5, 1};

@@ -1,6 +1,6 @@
 package progammers;
 
-public class jumpAndTeleport {
+public class JumpAndTeleport {
     public static void main(String[] args) {
         int n = 5000;
         int ans = 0;

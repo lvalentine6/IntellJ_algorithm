@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class doublePriorityQueue_L3 {
+public class DoublePriorityQueue_L3 {
     public static void main(String[] args) {
         String[] operations = {"I -45", "I 653", "D 1", "I -642", "I 45", "I 97", "D 1", "D -1", "I 333"};
         int[] answer = {0, 0};

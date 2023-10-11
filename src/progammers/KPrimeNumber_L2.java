@@ -1,6 +1,6 @@
 package progammers;
 
-public class kPrimeNumber_L2 {
+public class KPrimeNumber_L2 {
     static int answer;
 
     public static void main(String[] args) {

@@ -14,30 +14,30 @@ public class Tictactoe_L2 {
         int firstCnt = 0;
         int secondCnt = 0;
 
-        for(int i = 0; i < board.length; i++) {
+        for (int i = 0; i < board.length; i++) {
             String temp = board[i];
-            for(int j = 0; j < temp.length(); j++) {
+            for (int j = 0; j < temp.length(); j++) {
                 char ch = temp.charAt(j);
-                if(ch == 'O') {
+                if (ch == 'O') {
                     firstCnt++;
-                } else if(ch == 'X') {
+                } else if (ch == 'X') {
                     secondCnt++;
                 }
             }
         }
 
-        if(firstCnt < secondCnt || firstCnt > secondCnt + 1) {
+        if (firstCnt < secondCnt || firstCnt > secondCnt + 1) {
             return 0;
         }
 
-        if(checkBoard(board, 'O')) {
-            if(firstCnt == secondCnt) {
+        if (checkBoard(board, 'O')) {
+            if (firstCnt == secondCnt) {
                 return 0;
             }
         }
 
-        if(checkBoard(board, 'X')) {
-            if(firstCnt != secondCnt) {
+        if (checkBoard(board, 'X')) {
+            if (firstCnt != secondCnt) {
                 return 0;
             }
         }
@@ -46,29 +46,29 @@ public class Tictactoe_L2 {
     }
 
     public static boolean checkBoard(String[] board, char symbol) {
-        for(int i = 0; i < 3; i++) {
-            if(board[i].charAt(0) == symbol && board[i].charAt(1) == symbol
+        for (int i = 0; i < 3; i++) {
+            if (board[i].charAt(0) == symbol && board[i].charAt(1) == symbol
                     && board[i].charAt(2) == symbol) {
                 return true;
             }
         }
 
-        for(int i = 0; i < 3; i++) {
-            if(board[0].charAt(i) == symbol && board[1].charAt(i) == symbol
+        for (int i = 0; i < 3; i++) {
+            if (board[0].charAt(i) == symbol && board[1].charAt(i) == symbol
                     && board[2].charAt(i) == symbol) {
                 return true;
             }
         }
 
-        for(int i = 0; i < 3; i++) {
-            if(board[0].charAt(0) == symbol && board[1].charAt(1) == symbol
+        for (int i = 0; i < 3; i++) {
+            if (board[0].charAt(0) == symbol && board[1].charAt(1) == symbol
                     && board[2].charAt(2) == symbol) {
                 return true;
             }
         }
 
-        for(int i = 0; i < 3; i++) {
-            if(board[0].charAt(2) == symbol && board[1].charAt(1) == symbol
+        for (int i = 0; i < 3; i++) {
+            if (board[0].charAt(2) == symbol && board[1].charAt(1) == symbol
                     && board[2].charAt(0) == symbol) {
                 return true;
             }

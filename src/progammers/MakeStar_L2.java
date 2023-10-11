@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class makeStar_L2 {
+public class MakeStar_L2 {
     static List<int[]> list;
     static int[] xMinMax;
     static int[] yMinMax;

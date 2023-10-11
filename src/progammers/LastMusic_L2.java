@@ -3,7 +3,7 @@ package progammers;
 import java.util.ArrayList;
 import java.util.List;
 
-public class lastMusic_L2 {
+public class LastMusic_L2 {
     static String answer;
     static String[] result;
 

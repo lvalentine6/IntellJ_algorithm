@@ -1,6 +1,6 @@
 package progammers;
 
-public class visitedLength_L2 {
+public class VisitedLength_L2 {
     static int answer;
 
     public static void main(String[] args) {
