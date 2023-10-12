@@ -5,7 +5,7 @@ public class Tictactoe_L2 {
 
     public static void main(String[] args) {
         String[] board = {"O.X", ".O.", "..X"};
-        solution(board);
+        System.out.println(solution(board));
     }
 
     public static int solution(String[] board) {

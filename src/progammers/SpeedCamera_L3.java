@@ -3,7 +3,7 @@ package progammers;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class speedCamera_L3 {
+public class SpeedCamera_L3 {
     public static void main(String[] args) {
         int[][] routes = {{-20, -15}, {-14, -5}, {-18, 13}, {-5, -3}};
         int answer = 0;
