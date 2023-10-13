@@ -1,8 +1,8 @@
 *.class
 *.xml
-/src/BOJ/B1931.java
+/src/boj/B1931.java
 /src/Test/
-/src/Codility/Test/
+/src/codility/Test/
 /src/Dev/
 /src/Test/Kakao2023/
 /src/Test/Line2023/
