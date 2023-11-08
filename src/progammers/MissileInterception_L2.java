@@ -3,7 +3,7 @@ package progammers;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class MissileInterception {
+public class MissileInterception_L2 {
     public static void main(String[] args) {
         int[][] targets = {{4,5},{4,8},{10,14},{11,13},{5,12},{3,7},{1,4}};
 
